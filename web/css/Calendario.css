@@ -1,0 +1,50 @@
+.Calendario{
+    width: 50%;
+    height: 50%;
+    float: left
+}
+
+.subtititle{
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 600;
+    color: #FBA6C0;
+}
+.spannums{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .9em 2.2em;
+    background-color: #fe7678;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    float: left;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.btnpos{
+    display: block;
+    margin: auto;
+}
+div.frame{
+    width: 80%;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+}
+iframe{
+    width: 100%;
+    border-radius: 5px;
+    border-color: transparent;
+    border-width: 10px;
+    padding: 20px;
+    margin: auto;
+}

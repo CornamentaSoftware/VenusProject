@@ -1,0 +1,72 @@
+
+            html{
+                margin: 0px;
+            }
+            body{
+                margin: 0px;
+            }
+            #Nav{
+                position: absolute;
+                width: 100%;
+                height: 6%;
+                top: 0px;
+                background-color: #F8E8E5;
+                z-index: 0;
+            }
+            #Informacion{
+                position: absolute;
+                width: 18%;
+                height: 94%;
+                top: 6%;
+                left: 0px;
+                background-color: #9C455F;
+                z-index: 0;
+            }
+                #Informacion img{
+                    margin-top: 0px;
+                    width: 100%;
+                    border-radius: 100%;
+                }
+                #Informacion p{
+                    text-align: center;
+                }
+            #Contenido{
+                position: absolute;
+                width: 64%;
+                height: 94%;
+                top: 6%;
+                margin-left: 18%;
+                z-index: 0;
+                background-color: #F8E8E5;
+            }
+                #pub{
+                    margin-top: 5%;
+                    margin-left: 5%;
+                    width: 90%;
+                    background-color: white;
+                }
+                    #pub #ppic{
+                        margin-top: 1%;
+                        margin-left: 1%;
+                        width: 10%;
+                        border-radius: 100%;
+                    }
+                    #pub #contenido{
+                        margin-top: 2%;
+                        margin-left: 12%; 
+                        width: 88%;
+                    }
+                    #pub #contenido p{
+                        margin-top: 0px;
+                        margin-left: 0%;
+                    }
+            #Menu{
+                position: absolute;
+                width: 18%;
+                height: 94%;
+                top: 6%;
+                left: 82%;
+                background-color: #F8E8E5;
+                z-index: 1;
+            }
+        
