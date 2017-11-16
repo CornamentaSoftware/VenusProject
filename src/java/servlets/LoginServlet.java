@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String user = req.getParameter("user");
 		String pass = req.getParameter("contra");
                 
-                Comprobar comp = new Comprobar();
+                Base comp = new Base();
                 
                 boolean existe=comp.buscarUsuario(user, pass);
                 

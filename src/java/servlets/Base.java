@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets;
 
 import java.sql.Connection;
@@ -14,7 +9,7 @@ import java.sql.Statement;
  *
  * @author rodri
  */
-public class Comprobar {
+public class Base {
     
     public boolean buscarUsuario(String user, String contra){
         boolean existente=false;
@@ -41,5 +36,7 @@ public class Comprobar {
                 }
         return existente;
     }
+    
+    
     
 }
