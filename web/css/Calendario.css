@@ -5,10 +5,8 @@
 }
 .subtititle{
     font-family: "Raleway";
-    font-size: 20px;
-    font-weight: 600;
-    color: #FBA6C0;
 }
+
 .spannums{
     border-radius: 300px;
     font-size: 13px;
@@ -31,7 +29,7 @@
 }
 .btnpos{
     display: block;
-    margin: auto;
+    cursor: pointer;
 }
 div.frame{
     width: 80%;
@@ -59,6 +57,24 @@ table{
     width: 100%;
 }
 th, td{
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
+#th1{
+    background-color: rgba(63, 161, 191, 0.59);
+    color: white;
+}
+#th2{
+    background-color: rgb(191, 63, 135);
+    color: white;
+}
+#th3{
+    background-color: rgba(193, 66, 66, 0.7);
+    color: white;
+}
+td{
+    background-color: rgba(191, 178, 63, 0.5);
+    
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
