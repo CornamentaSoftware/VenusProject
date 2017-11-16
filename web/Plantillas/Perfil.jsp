@@ -1,3 +1,11 @@
+<%-- 
+    Document   : Perfil
+    Created on : 16/11/2017, 08:17:51 AM
+    Author     : Alumno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Tu perfil</title>
@@ -29,3 +37,4 @@
         </div>
     </body>
 </html>
+
