@@ -11,6 +11,12 @@ import java.sql.Statement;
  */
 public class Base {
     
+    private String idUser;
+
+    public String getIdUser() {
+        return idUser;
+    }
+    
     public boolean buscarUsuario(String user, String contra){
         boolean existente=false;
                 try{
@@ -26,6 +32,7 @@ public class Base {
                         
                         if (rs.next()){
                             existente=true;
+                            idUser = rs.getString("Id_Usuario");
                         }
                         c.cerrarConexion();
                     }
@@ -36,7 +43,6 @@ public class Base {
                 }
         return existente;
     }
-    
     
     
 }

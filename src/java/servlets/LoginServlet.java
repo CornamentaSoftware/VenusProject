@@ -41,6 +41,7 @@ public class LoginServlet extends HttpServlet {
                 
 		if (existe == true) {
 			sesion.setAttribute("usuario", user);
+                        sesion.setAttribute("IdUser", comp.getIdUser());
                         Date estaconexion = new Date(sesion.getCreationTime() );
                         sesion.setAttribute("creacion", estaconexion);
                         Date ultimaconexion = new Date(sesion.getLastAccessedTime());
