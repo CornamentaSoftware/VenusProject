@@ -1,8 +1,13 @@
 body{
     font-family: 'Raleway', sans-serif;
-    height: 100%;
     width: 100%;
     margin: 8px;  
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
 }
 .Logo{
     margin-left: 1%;
@@ -37,10 +42,35 @@ textArea{
     font-size: 60px;
     margin: 0px;
 }
+.Pacifico50{
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-family: 'Pacifico', cursive;
+}
 .Raleway{
-    margin: 0px;
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
+}
+.marginBottom{
+    margin-bottom: 15px;
+    height: 120px;
+}
+.margin0{
+    margin: 0px;
+}
+.marginBottom0{
+    margin-bottom: 0px;
+}
+.Montserrat{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.Pacifico{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 19px;
+    font-family: 'Pacifico', cursive;
 }
 .color46373f{
     color: #46373f;
