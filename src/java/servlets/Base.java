@@ -25,8 +25,8 @@ public class Base {
                     
                     if (con!=null){
                         String sql = "SELECT * FROM usuario WHERE"
-                                + " Username_Usuario='"+user+"' AND "
-                                + "Contrasenia_Usuario='"+contra+"'";
+                                + " Username_Usuario='"+user+"' && "
+                                + "Contrasenia_Usuario='"+contra+"';";
                         PreparedStatement ps = con.prepareStatement(sql);
                         ResultSet rs = ps.executeQuery(); 
                         

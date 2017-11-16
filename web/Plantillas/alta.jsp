@@ -35,10 +35,10 @@
             try {
                 sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, Contrasenia_Usuario)"
                         + "values('" + nombre + "','" + apellidos + "','" + correo + "', '" + username + "','" + contra + "');");
-                out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8080/Venus-master/Plantillas/Ingresar.html';</script>");
+                out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8080/Venus/Plantillas/Ingresar.html';</script>");
                 con.close();
             } catch (SQLException error) {
-                out.println("<script>alert('Ha ocurrido un error con tu alta');window.location.href = 'http://localhost:8080/Venus-master/Plantillas/Inicio.html';</script>");
+                out.println("<script>alert('Ha ocurrido un error con tu alta');window.location.href = 'http://localhost:8080/Venus/Plantillas/Inicio.html';</script>");
             }
             con.close();
         %>
