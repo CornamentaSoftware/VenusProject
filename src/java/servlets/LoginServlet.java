@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
                         
                         Date now = new Date();
                         DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);
-                        resp.sendRedirect("http://localhost:8080/Venus/Plantillas/Menu.jsp");
+                        resp.sendRedirect("http://localhost:8080/VenusProject/Plantillas/Menu.jsp");
 		} else {
 			response(resp, "<script>alert('La sesion es inválida o no existe');window.location.href = 'http://localhost:8080/Venus/Plantillas/Ingresar.html';</script>");
                         

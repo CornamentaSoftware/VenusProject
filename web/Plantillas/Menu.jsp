@@ -98,7 +98,6 @@
                 response.sendRedirect("Inicio.html");
                 return; //the return is important; forces redirect to go now
             }
-            else{
             DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);           
             String conexion = (String) formatter.format(session.getAttribute("creacion"));
             
@@ -111,7 +110,7 @@
             session.getCreationTime(); 
             Date duracion=new Date(longDuracion);
             String crop = ("Tiempo en la sesion: " + duracion.getMinutes() + "min." + duracion.getSeconds()+"seg");
-            }
+            
         %>
         <div class="MenuA">
             <div class="Logo">
