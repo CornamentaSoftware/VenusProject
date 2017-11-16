@@ -1,6 +1,6 @@
 .Calendario{
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     float: left
 }
 .subtititle{
@@ -46,4 +46,11 @@ iframe{
     border-width: 10px;
     padding: 20px;
     margin: auto;
+}
+#divBotones{
+    margin: 0 auto;
+    width: 70%;
+}
+*{
+    box-sizing: border-box;
 }
