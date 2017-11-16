@@ -2,11 +2,77 @@
     width: 55%;
     float: left;
     position: absolute;
-    margin-top: 3%;
     margin-left: 22.5%;
     margin-right: 22.5%;
 }
-.InicioChats img{
+.msjChats{
+    height: 91%;
+    width: 55%;
+    float: left;
+    position: absolute;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+.marginL{
+    margin-left: 10%;
+    margin-top: 0px;
+}
+.marginL5{
+    margin-left: 5%;
+}
+.datosChat{
+    margin-left: 20px;
+    height: 80%;
+    margin-top: 3%;
+    float: left;
+}
+.Chats{
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+    height: 120px;
+    border-top: 1.5px solid #bfbdbd;
+}
+.Chats:hover{
+    background-color: #e6e6e6;
+}
+.Chats img{
+    height: 80%;
+    float: left;
+    margin-top: 2%;
+    position: relative;
+    border-radius: 50%;
+}
+.Contenido{
+    position: absolute;
+}
+.opciones{
+    float: left;
+    position: absolute;
+    margin-top: 39%;
+    width: 100%;
+}
+@media only screen and (max-width: 1100px){
+    .opciones{
+        margin-top: 50%;
+    }
+}
+@media only screen and (max-width: 780px){
+    .opciones{
+        margin-top: 60%;
+    }
+}
+.contOpc{
+    float: right;
+    margin-right: 3%;
+}
+.opciones2{
+    float: right;
+    margin-top: 3%;
+    width: 100%;
+    margin-left: 78%;
+}
+.InicioChats .img{
     width: 15%;
     position: absolute;
 }

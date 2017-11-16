@@ -9,9 +9,10 @@
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
         <script src="../css/desplear.js" type="text/javascript"></script>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat|Raleway|Lobster+Two" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
         <link href="../css/Chats/Chats.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/mensajes.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -86,8 +87,8 @@
                             <small>Siéntete libre de hablar</small>
                         </a>
                         <ul>
-                            <li><a href="ChatsPrivados.html"><i class="fa fa-unlock-alt"></i>Públicos</a></li>
-                            <li><a href="ChatsPublicos.html"><i class="fa fa-lock"></i>Privados</a></li>
+                            <li><a href="ChatsPublicos.html"><i class="fa fa-unlock-alt"></i>Públicos</a></li>
+                            <li><a href="ChatsPrivados.html"><i class="fa fa-lock"></i>Privados</a></li>
                         </ul>
                     </li>
                     <li>
@@ -114,25 +115,83 @@
             </nav>
         </div>
         </div>
-        <div class="InicioChats">
-            <img src="../Img/Chats/chats1.png" class="a img" alt=""/>
-            <img src="../Img/Chats/chats9.png" class="b img" alt=""/>
-            <img src="../Img/Chats/chats8.png" class="c img" alt=""/>
-            <img src="../Img/Chats/chats4.png" class="d img" alt=""/>
-            <img src="../Img/Chats/chats7.png" class="e img" alt=""/>
-            <img src="../Img/Chats/chats6.png" class="f img" alt=""/>
-            <img src="../Img/Chats/chats5.png" class="g img" alt=""/>
-            <img src="../Img/Chats/chats10.png" class="h img" alt=""/>
-                <div class="texto">
-                <p class="LobsterTwo color46373f">Chats</p>
-                <p class="Raleway pequeño">Siéntete libre de compartir lo que sea</p>
-                </div>
-        </div>
-        <div class="opciones">
-            <div class="contOpc">
-            <button class="btn btnR" onclick="location.href='ChatsPrivados.html';">Privados</button>
-            <button class="btn btnR" onclick="location.href='ChatsPublicos.html';">Públicos</button>
+        <div class="msjChats">
+            <div class='infoChat'>
+                <img src="../Img/Chats/2.jpg" class="imgChat" alt=""/>
+                <p class="Pacifico50 color46373f left marginL5">MA'S</p>
             </div>
+            <div class='Mensajes'>
+                <div class='espacio10'></div>
+                <div class='mensaje mensajeMiUsuario BcolorF4D0C6'>
+                    Hola <p class="Hora">10:10</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolord37e71bf'>
+                    <p class="nombre colord37e71bf">Calixto</p>
+                    Hace mucho que no hablamos <p class="Hora">10:20</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolorefbeb1'>
+                    <p class="nombre colorefbeb1">Danny</p>
+                    Ya sé, los extraño 💖<p class="Hora">10:22</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolore56a74d9'>
+                    <p class="nombre colore56a74d9">Gabby</p>
+                    Cuándo nos vemos? 💃<p class="Hora">10:22</p>
+                </div>
+            </div>
+            <div class="msj">
+                <textarea placeholder="Escribe un mensaje..."></textarea>
+                <button class='iconos right marginR5 top5'>
+                    <i class="fa fa-smile-o emojisB" aria-hidden="true"></i>
+                </button>
+                <button class='iconos right marginR5 top20'>
+                    <i class="fa fa-paper-plane enviar" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="todosEmojis" id='todosE'>
+            <button class="iconos emojis left">❤</button>
+            <button class="iconos emojis left">💔</button>
+            <button class="iconos emojis left">💖</button>
+            <button class="iconos emojis left">💘</button>
+            <button class="iconos emojis left">💞</button>
+            <button class="iconos emojis left">⚢</button>
+            <button class="iconos emojis left">😍</button>
+            <button class="iconos emojis left">😚</button>
+            <button class="iconos emojis left">😂</button>
+            <button class="iconos emojis left">😭</button>
+            <button class="iconos emojis left">😊</button>
+            <button class="iconos emojis left">😒</button>
+            <button class="iconos emojis left">😔</button>
+            <button class="iconos emojis left">😐</button>
+            <button class="iconos emojis left">😠</button>
+            <button class="iconos emojis left">😰</button>
+            <button class="iconos emojis left">😱</button>
+            <button class="iconos emojis left">😳</button>
+            <button class="iconos emojis left">💩</button>
+            <button class="iconos emojis left">😴</button>
+            <button class="iconos emojis left">🙊</button>
+            <button class="iconos emojis left">🙈</button>
+            <button class="iconos emojis left">🙉</button>
+            <button class="iconos emojis left">💋</button>
+            <button class="iconos emojis left">👌</button>
+            <button class="iconos emojis left">🖕</button>
+            <button class="iconos emojis left">🤘</button>
+            <button class="iconos emojis left">👉</button>
+            <button class="iconos emojis left">👈</button>
+            <button class="iconos emojis left">👏</button>
+            <button class="iconos emojis left">💅</button>
+            <button class="iconos emojis left">💁</button>
+            <button class="iconos emojis left">🙋</button>
+            <button class="iconos emojis left">🙅</button>
+            <button class="iconos emojis left">🤔</button>
+            <button class="iconos emojis left">🤙</button>
+            <button class="iconos emojis left">🤞</button>
+            <button class="iconos emojis left">🌷</button>
+            <button class="iconos emojis left">🌹</button>
+            <button class="iconos emojis left">🌺</button>
+            <button class="iconos emojis left">🎄</button>
+            <button class="iconos emojis left">🎅</button>
+            <button class="iconos emojis left">🎈</button>
         </div>
     </body>
 </html>
