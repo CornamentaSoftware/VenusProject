@@ -57,14 +57,13 @@
 				FileItem item=(FileItem)it.next();
 				if(item.isFormField()){
 					out.println(item.getFieldName()+"<br>");
-                                        out.println("<script>alert('nel')</script>");
                                 }
 				else
 				{
 					file=new File(item.getName());
 					item.write(new File(destino,file.getName()));
-                                        objeto = (ruta + "/" + item.getName());
-					out.println("<script>alert('Imagen: "+objeto+"')</script>");
+                                        objeto = ("Uploads/" + item.getName());
+					out.println("Fichero subido");
 				} // end if
 			} // end while
                 }
@@ -87,8 +86,9 @@
 
             try {
                 result = sta.executeQuery("Select * from usuario where Username_Usuario = '" + username + "';");
-                if(result.first()){
-                    out.println("<script>alert('Ya existe este username dentro del sistema');</script>");
+                if(!result.first()){
+                    out.println("<script>alert('Ya existe este username dentro del sistema');"
+                            + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
                 }
                 else{
                     sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, "
@@ -100,7 +100,7 @@
                     out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/redireccionar.jsp';</script>");
                 }
             } catch (SQLException error) {
-                out.println("<script>alert('Ha ocurrido un error con tu alta');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");
+                out.println("<script>alert('Ha ocurrido un error con tu alta');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
             }
             con.close();
         %>
