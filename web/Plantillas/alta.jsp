@@ -4,6 +4,10 @@
     Author     : rodri
 --%>
 
+<%@page import="org.apache.tomcat.util.http.fileupload.FileItem"%>
+<%@page import="org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory"%>
+<%@page import="org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload"%>
+<%@page import="org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,6 +27,38 @@
 
             Connection con = null;
             Statement sta = null;
+            
+                String rutalocal=getServletContext().getRealPath("/");
+                String rutacarp=rutalocal+"Uploads";
+                String nruta=rutacarp.replace("\\","/");
+                String ruta=nruta.replaceAll("/build",""); 
+                String objeto = "";
+                
+                File destino = new File(ruta);
+                
+		ServletRequestContext src = new ServletRequestContext(request);
+ 
+		if(ServletFileUpload.isMultipartContent(src)){
+			DiskFileItemFactory factory = new DiskFileItemFactory((1024*1024),destino);
+			ServletFileUpload upload = new  ServletFileUpload(factory);
+ 
+			java.util.List lista = upload.parseRequest(src);
+			File file = null;
+			java.util.Iterator it = lista.iterator();
+ 
+			while(it.hasNext()){
+				FileItem item=(FileItem)it.next();
+				if(item.isFormField())
+					out.println(item.getFieldName()+"<br>");
+				else
+				{
+					file=new File(item.getName());
+					item.write(new File(destino,file.getName()));
+                                        objeto = (ruta + "/" + item.getName());
+					out.println("Fichero subido");
+				} // end if
+			} // end while
+                }
 
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
