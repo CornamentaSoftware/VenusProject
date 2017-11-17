@@ -1,4 +1,4 @@
- <html>
+<html>
     <head>
         <title>Venus</title>
         <meta charset="UTF-8">
@@ -7,6 +7,153 @@
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat|Raleway" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
+        <script>
+            
+            var conf1=false;
+            var conf2=false;
+            var conf3=false;
+            
+            function solocadena(e)
+            {
+            var keynum;
+            if(window.event)
+                keynum = e.keyCode;
+            else 
+                if (e.which)
+                    keynum=e.which;
+            
+            if ((keynum>=97&&keynum<=122) || (keynum>=65&&keynum<=90) || (keynum>=128&&keynum<=165) || keynum === 8 || keynum === 32)
+                return true;
+            else
+                return false;
+            }
+            
+            function validarcontra()
+            {
+                var contra1 = (document.getElementById("con1")).value;
+                var contra2 = (document.getElementById("con2")).value;
+                
+                if (contra1 === "" || contra2 === ""){
+                    alert("Por favor, confirma tu contraseña");
+                    conf1 = false;
+                }
+                else{
+                    if (contra1 === contra2)
+                    {
+                        conf1=true;
+                    }
+                    else
+                        alert("Por favor, confirma tu contraseña");
+                }
+            }
+            
+            function soloCorreo()
+            {
+                var texto4 = document.getElementById("corr");
+                var cuantos = texto4.value.length;
+                var cadena=texto4.value;
+                var arroba=0;
+                var puntos=0;
+                
+                for (i=0; i<cuantos; i++)
+                {
+                    if (cadena.charAt(i) === "@")
+                        ++ arroba;
+                    if (cadena.charAt(i) === ".")
+                        ++ puntos;
+                }
+                if ((arroba === 0 || arroba>1) || (puntos === 0 ||  puntos > 2))
+                {
+                    alert ("Por favor, ingresa un correo válido");
+                    texto4.focus();
+                    return false;
+                }
+                else 
+                    conf2=true;
+                    return false;
+            }
+            
+            function soloEnteros(e)
+            {
+            var keynum;
+            if(window.event)
+                keynum = e.keyCode;
+            else 
+                if (e.which)
+                    keynum=e.which;
+            
+            if ((keynum>=48&&keynum<=57) || keynum === 8)
+                return true;
+            else
+                return false;
+            }
+            
+            function llevar(){
+                if (conf1 === true && conf2 === true && conf3 === true){
+                    document.Dardealta.submit() 
+                }
+            }
+            
+            function llenado()
+            {
+                var nom = document.getElementById("cajanombre");
+                var ape = document.getElementById("cajaapellido");
+                var correo = document.getElementById("corr");
+                var con1 = document.getElementById("con1");
+                var con2 = document.getElementById("con2");
+                var caja1= document.getElementById("cajausuario");
+                
+                if (nom.value === "")
+                {
+                    nom.focus();
+                    return false;
+                }
+                else
+                {
+                    if (ape.value === "")
+                    {
+                        ape.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        if (correo.value === "")
+                        {
+                            correo.focus();
+                            return false;
+                        }
+                        else
+                        {
+                            if (con1.value === "")
+                            {
+                                con1.focus();
+                                return false;
+                            }
+                            else
+                            {
+                                if (con2.value === "")
+                                {
+                                    con2.focus();
+                                    return false;
+                                }
+                                else
+                                {
+
+                                    if (caja1.value === "")
+                                    {
+                                        return false;
+                                    }
+                                    else
+                                        conf3=true;
+                                           
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="Todo sesenta">
@@ -15,15 +162,15 @@
             </div>
             <div class="Div2">
                 <div class="ochenta"><br>
-                    <form name="Dar de alta" action="alta.jsp">
-                        <input type="text" class="R" placeholder="Nombre" name="nombre">
-                        <input type="text" class="R" placeholder="Apellido(s)" name="apellido">
-                        <input type="text" class="R" placeholder="Usuario" name="username">
-                        <input type="password" class="R" placeholder="Contraseña" name="contrasenia">
-                        <input type="password" class="R" placeholder="Confirmar Contraseña">
-                        <input type="text" class="R" placeholder="Correo electrónico" name="correo"><br>
+                    <form name="Dardealta" action="alta.jsp" enctype=multipart/form-data>
+                        <input type="text" class="R" placeholder="Nombre" name="nombre" maxlength="30" id="cajanombre" onkeypress="return solocadena(event)" required>
+                        <input type="text" class="R" placeholder="Apellido(s)" name="apellido" maxlength="50" id="cajaapellido" onkeypress="return solocadena(event)" required>
+                        <input type="text" class="R" placeholder="Usuario" name="username" maxlength="30" id="cajausuario" required>
+                        <input type="password" class="R" placeholder="Contraseña" name="contrasenia" maxlength="30" id="con1" required>
+                        <input type="password" class="R" placeholder="Confirmar Contraseña" name="confcontrasenia" id="con2" maxlength="30" required>
+                        <input type="text" class="R" placeholder="Correo electrónico" name="correo" id="corr" maxlength="30" required><br>
                         <input type="file" name="fichero" accept=".jpg, .jpeg, .png">
-                        <center><button type="submit">Registrarse</button></center>
+                        <center><button onclick="validarcontra(), soloCorreo(), llevar(), llenado()">Registrarse</button></center>
                     </form>
                 </div>
             </div>
