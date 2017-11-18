@@ -91,7 +91,6 @@
         <%@page import="java.io.*, java.text.SimpleDateFormat" %>
         <%
             String user = (String)session.getAttribute("usuario");
-            String ip = (String)session.getAttribute("IP");
             
             if(user ==null)
             {
@@ -118,7 +117,7 @@
             </div>
             <div class="Derecha">
                 <div class="Reloj" name="cron" id="cronometro">
-                    <h2 class="letraReloj"><%=ip%><br><%=crop%><br>Ultima conexion: <%=conexion%></h2>
+                    <h2 class="letraReloj"><br><%=crop%><br>Ultima conexion: <%=conexion%></h2>
                 </div>
                 <ul class="ca-menu"> 
                     <li class="chico">

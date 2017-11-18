@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +45,7 @@ public class LoginServlet extends HttpServlet {
                 
 		if (existe == true) {
 			sesion.setAttribute("usuario", user);
+                        sesion.setAttribute("contrasenia", pass);
                         sesion.setAttribute("IdUser", comp.getIdUser());
                         Date estaconexion = new Date(sesion.getCreationTime() );
                         sesion.setAttribute("creacion", estaconexion);
@@ -48,15 +53,20 @@ public class LoginServlet extends HttpServlet {
                         sesion.setAttribute("last", ultimaconexion);
                         sesion.setMaxInactiveInterval(300); //600 secs = 10 mins
 
-                        String ip=GetIP();
-                        sesion.setAttribute("IP", ip);
-                        
+                        String ipusuario=GetIP();
+                        String ipbase=buscarIP(user, pass);
+                           
                         Date now = new Date();
                         DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);
-                        resp.sendRedirect("http://localhost:8084/VenusProject/Plantillas/Menu.jsp");
-		} else {
-			response(resp, "<script>alert('La sesion es inválida o no existe');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");
                         
+                        if (!ipusuario.equals(ipbase)) {
+                            resp.sendRedirect("http://localhost:8084/VenusProject/Plantillas/Menu.jsp");
+                        } else {
+                            response(resp, "<script>alert('Se ha iniciado sesión por última vez en otro equipo, es necesario validar la sesión');"
+                                    + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Comprobacion.jsp';</script>");
+                        }
+		} else {
+			response(resp, "<script>alert('La sesion es inválida o no existe');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");   
 		}
 	}
         
@@ -65,15 +75,39 @@ public class LoginServlet extends HttpServlet {
         String ip="";
             
         InetAddress address;
-        try {
-            address = InetAddress.getLocalHost();
-            ip=("IP Local :"+address.getHostAddress());
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            try {
+                address = InetAddress.getLocalHost();
+                ip=("IP Local :"+address.getHostAddress());
+            } catch (UnknownHostException ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return ip;
         }
         
-    return ip;
-}
+        public String buscarIP(String user, String contra){
+            String ip="";
+                try{
+                    Conexion c = new Conexion();
+                    Connection con = c.getConexion();
+                    
+                    if (con!=null){
+                        String sql = "SELECT * FROM usuario WHERE"
+                                + " Username_Usuario='"+user+"' && "
+                                + "Contrasenia_Usuario='"+contra+"';";
+                        PreparedStatement ps = con.prepareStatement(sql);
+                        ResultSet rs = ps.executeQuery(); 
+                        
+                        if (rs.next()){
+                            ip = rs.getString("IP_Usuario");
+                        }
+                        c.cerrarConexion();
+                    }
+                }
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
+        return ip;
+    }
 
 	private void response(HttpServletResponse resp, String msg)
 			throws IOException {
