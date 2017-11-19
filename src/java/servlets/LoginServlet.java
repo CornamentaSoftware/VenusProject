@@ -55,6 +55,9 @@ public class LoginServlet extends HttpServlet {
 
                         String ipusuario=GetIP();
                         String ipbase=buscarIP(user, pass);
+                        sesion.setAttribute("IP", ipusuario);
+                        String imagen=buscarImagen(user, pass);
+                        sesion.setAttribute("ImagenPerfil", imagen);
                            
                         Date now = new Date();
                         DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);
@@ -63,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                             resp.sendRedirect("http://localhost:8084/VenusProject/Plantillas/Menu.jsp");
                         } else {
                             response(resp, "<script>alert('Se ha iniciado sesión por última vez en otro equipo, es necesario validar la sesión');"
-                                    + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Comprobacion.jsp';</script>");
+                                    + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Comprobacion.jsp;</script>");
                         }
 		} else {
 			response(resp, "<script>alert('La sesion es inválida o no existe');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");   
@@ -108,6 +111,31 @@ public class LoginServlet extends HttpServlet {
                 }
         return ip;
     }
+        
+        public String buscarImagen(String user, String contra){
+            String imagen="";
+                try{
+                    Conexion c = new Conexion();
+                    Connection con = c.getConexion();
+                    
+                    if (con!=null){
+                        String sql = "SELECT * FROM usuario WHERE"
+                                + " Username_Usuario='"+user+"' && "
+                                + "Contrasenia_Usuario='"+contra+"';";
+                        PreparedStatement ps = con.prepareStatement(sql);
+                        ResultSet rs = ps.executeQuery(); 
+                        
+                        if (rs.next()){
+                            imagen = rs.getString("Imagen_Usuario");
+                        }
+                        c.cerrarConexion();
+                    }
+                }
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
+        return imagen;
+        }
 
 	private void response(HttpServletResponse resp, String msg)
 			throws IOException {

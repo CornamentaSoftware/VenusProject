@@ -1,6 +1,14 @@
 body{
     font-family: 'Raleway', sans-serif;
 }
+.bien{
+    font-size: 14px;
+    color: #FF8D72;
+    text-align: center;
+    position: relative;
+    padding-left: 200px;
+    float: left;
+}
 .letraReloj{
     font-size: 14px;
     color: #FF8D72;

@@ -4,6 +4,7 @@
     Author     : rodri
 --%>
 
+<%@page import="java.util.Set"%>
 <%@page import="servlets.LoginServlet"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="java.util.logging.Level"%>
@@ -23,14 +24,15 @@
     <body>
         <%@page import="java.sql.*,java.io.*" %>
         <%
-            String nombre = request.getParameter("nombre");
-            String apellidos = request.getParameter("apellido");
-            String nombreCompleto = (nombre + " "  + apellidos);
-            String correo = request.getParameter("correo");
-            String username = request.getParameter("username");
-            String contra = request.getParameter("contrasenia");
+            String nombre = "";
+            String apellidos = "";
+            String nombreCompleto = "";
+            String correo = "";
+            String username = "";
+            String contra = "";
+            
             String ip="";
-
+            
             Connection con = null;
             Statement sta = null;
             ResultSet result;
@@ -55,8 +57,17 @@
  
 			while(it.hasNext()){
 				FileItem item=(FileItem)it.next();
-				if(item.isFormField()){
-					out.println(item.getFieldName()+"<br>");
+				if(item.isFormField()){                                       
+                                        if (item.getFieldName().equals("nombre"))
+                                            nombre = item.getString();
+                                        if (item.getFieldName().equals("apellido"))
+                                            apellidos = item.getString();
+                                        if (item.getFieldName().equals("correo"))
+                                            correo = item.getString();
+                                        if (item.getFieldName().equals("username"))
+                                            username = item.getString();
+                                        if (item.getFieldName().equals("contrasenia"))
+                                            contra = item.getString();
                                 }
 				else
 				{
@@ -86,9 +97,9 @@
 
             try {
                 result = sta.executeQuery("Select * from usuario where Username_Usuario = '" + username + "';");
-                if(!result.first()){
-                    out.println("<script>alert('Ya existe este username dentro del sistema');"
-                            + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
+                if(result.first()){
+                    //out.println("<script>alert('Ya existe este username dentro del sistema');"
+                    //        + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
                 }
                 else{
                     sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, "
@@ -97,6 +108,7 @@
                     con.close();
                     session.setAttribute("usuario", username);
                     session.setAttribute("contra", contra);
+                    session.setAttribute("ImagenPerfil", objeto);
                     out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/redireccionar.jsp';</script>");
                 }
             } catch (SQLException error) {

@@ -36,6 +36,8 @@
                 if (contra1 === "" || contra2 === ""){
                     alert("Por favor, confirma tu contraseña");
                     conf1 = false;
+                    conf2 = false;
+                    conf3 = false;
                 }
                 else{
                     if (contra1 === contra2)
@@ -44,6 +46,9 @@
                     }
                     else
                         alert("Por favor, confirma tu contraseña");
+                        conf1 = false;
+                        conf2 = false;
+                        conf3 = false;
                 }
             }
             
@@ -66,11 +71,12 @@
                 {
                     alert ("Por favor, ingresa un correo válido");
                     texto4.focus();
-                    return false;
+                    conf1 = false;
+                    conf2 = false;
+                    conf3 = false;
                 }
                 else 
                     conf2=true;
-                    return false;
             }
             
             function soloEnteros(e)
@@ -96,6 +102,7 @@
             
             function llenado()
             {
+                var img = document.getElementById("imagen");
                 var nom = document.getElementById("cajanombre");
                 var ape = document.getElementById("cajaapellido");
                 var correo = document.getElementById("corr");
@@ -106,47 +113,70 @@
                 if (nom.value === "")
                 {
                     nom.focus();
-                    return false;
+                    conf1 = false;
+                    conf2 = false;
+                    conf3 = false;
                 }
                 else
                 {
                     if (ape.value === "")
                     {
                         ape.focus();
-                        return false;
+                        conf1 = false;
+                        conf2 = false;
+                        conf3 = false;
                     }
                     else
                     {
                         if (correo.value === "")
                         {
                             correo.focus();
-                            return false;
+                            conf1 = false;
+                            conf2 = false;
+                            conf3 = false;
                         }
                         else
                         {
                             if (con1.value === "")
                             {
                                 con1.focus();
-                                return false;
+                                conf1 = false;
+                                conf2 = false;
+                                conf3 = false;
                             }
                             else
                             {
                                 if (con2.value === "")
                                 {
                                     con2.focus();
-                                    return false;
+                                    conf1 = false;
+                                    conf2 = false;
+                                    conf3 = false;
                                 }
                                 else
                                 {
 
                                     if (caja1.value === "")
                                     {
-                                        return false;
+                                        caja1.focus();
+                                        conf1 = false;
+                                        conf2 = false;
+                                        conf3 = false;
                                     }
                                     else
-                                        conf3=true;
-                                           
-                                    
+                                    {
+                                        if (img.value === "")
+                                        {
+                                            img.focus();
+                                            conf1 = false;
+                                            conf2 = false;
+                                            conf3 = false;
+                                        }
+                                        else
+                                        {
+                                            conf3=true; 
+                                        }
+                                    }   
                                 }
                             }
                         }
@@ -169,7 +199,7 @@
                         <input type="password" class="R" placeholder="Contraseña" name="contrasenia" maxlength="30" id="con1" required>
                         <input type="password" class="R" placeholder="Confirmar Contraseña" name="confcontrasenia" id="con2" maxlength="30" required>
                         <input type="text" class="R" placeholder="Correo electrónico" name="correo" id="corr" maxlength="30" required><br>
-                        <input type="file" name="fichero" accept=".jpg, .jpeg, .png">
+                        <input type="file" name="fichero" accept=".jpg, .jpeg, .png" id="imagen" required>
                         <center><button onclick="validarcontra(), soloCorreo(), llevar(), llenado()">Registrarse</button></center>
                     </form>
                 </div>

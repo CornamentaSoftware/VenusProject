@@ -15,7 +15,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function ConfirmDemo() {
+            function comprobar() {
                 //Ingresamos un mensaje a mostrar
                 var mensaje = confirm("¿Estas seguro de que los datos son correctos?");
                 //Detectamos si el usuario acepto el mensaje
