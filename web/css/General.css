@@ -27,6 +27,7 @@ body{
     font-weight: 600;
     color: #8d3536;
 }
+
 textArea{
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
@@ -65,6 +66,11 @@ textArea{
 .Montserrat{
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+}
+.Montserrat2{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 .Pacifico{
     margin-bottom: 5px;

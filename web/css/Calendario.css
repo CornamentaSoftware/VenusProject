@@ -3,22 +3,36 @@
     height: 50%;
     float: left
 }
-.subtititle{
-    font-family: "Raleway";
-}
 
 .spannums{
     border-radius: 300px;
     font-size: 13px;
     margin: 5px auto;
-    font-family: "Raleway";
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
-    padding: .9em 2.2em;
-    background-color: #fe7678;
+    padding: .75em 1.5em;
+    background-color: rgb(191, 63, 135);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.spannums2{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .75em 1.5em;
+    background-color: rgba(193, 66, 66, 0.7);
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     line-height: 1em;
@@ -55,13 +69,15 @@ table{
 }
 th, td{
     text-align: center;
-    padding: 8px;
+    width: 150px;;
+    height: 30px;
+    padding: 4px;
     border-width: 1px;
     border-color: #7f7f7f;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 #th1{
-    background-color: rgba(63, 161, 191, 0.59);
+    background-color: rgba(60, 144, 240, 0.78);
     color: white;
 }
 #th2{
@@ -73,7 +89,100 @@ th, td{
     color: white;
 }
 td{
-    background-color: rgba(242, 129, 180, 0.28);
+    background-color: #eeeeee;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2}
+
+.btnRCalen:hover {
+    background: rgba(0,0,0,0);
+    color: rgba(60, 144, 240, 0.78);
+    box-shadow: inset 0 0 0 3px rgba(60, 144, 240, 0.78);
+}
+.btnR2td:hover {
+    background: rgba(0,0,0,0);
+    color: rgb(191, 63, 135);
+    box-shadow: inset 0 0 0 3px rgb(191, 63, 135);
+}
+.btnR3td:hover {
+    background: rgba(0,0,0,0);
+    color: rgba(193, 66, 66, 0.7);
+    box-shadow: inset 0 0 0 3px rgba(193, 66, 66, 0.7);
+}
+.btncalen{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .5em .5em;
+    background-color: rgba(60, 144, 240, 0.78);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.btnplusmin{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: 0.4em .4em;
+    background-color: rgb(191, 63, 135);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.btnplusmin2{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .4em .4em;
+    background-color: rgba(193, 66, 66, 0.7);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.btn2{
+    border-radius: 300px;
+    font-size: 11px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    background-color: rgb(102, 163, 40);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.btnR2:hover {
+    background: rgba(0,0,0,0);
+    color: rgb(102, 163, 40);
+    box-shadow: inset 0 0 0 3px rgb(102, 163, 40);
+}

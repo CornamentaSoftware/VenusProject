@@ -43,44 +43,7 @@
 #nuevo:hover:before {
  left: 7px;
 }
-.btncalen{
-    border-radius: 300px;
-    font-size: 13px;
-    margin: 5px auto;
-    font-family: "Raleway";
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    padding: .9em 2.2em;
-    background-color: #fe7678;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    line-height: 1em;
-    color: #fff;
-    border: none;
-    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
-}
-.btnplusmin{
-    border-radius: 300px;
-    font-size: 13px;
-    margin: 5px auto;
-    font-family: "Raleway";
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    background-color: #fe7678;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    line-height: 1em;
-    color: #fff;
-    border: none;
-    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
-}
+
 .btnSRSH{
     background: rgba(0,0,0,0);
     color: #fe7678;
