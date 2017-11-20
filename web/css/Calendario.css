@@ -3,17 +3,31 @@
     height: 50%;
     float: left
 }
+#textofecha{
+    font-size: 15px;
+    font-family:'Montserrat', sans-serif;
+    color: #D37E71;
+    background: rgb(238, 238, 238);
+    border: 1px solid rgba(60, 144, 240, 0.78);
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+}
 
 .spannums{
+    width: 40%;
+    height: 40px;
+    font-family:'Montserrat', sans-serif;
+    text-align: center;
     border-radius: 300px;
-    font-size: 13px;
+    font-size: 15px;
     margin: 5px auto;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
-    padding: .75em 1.5em;
+    padding: .5em .5em;
     background-color: rgb(191, 63, 135);
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -23,15 +37,19 @@
     transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
 }
 .spannums2{
+    width: 40%;
+    height: 40px;
+    font-family:'Montserrat', sans-serif;
+    text-align: center;
     border-radius: 300px;
-    font-size: 13px;
+    font-size: 15px;
     margin: 5px auto;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
-    padding: .75em 1.5em;
+    padding: .5em .5em;
     background-color: rgba(193, 66, 66, 0.7);
     -webkit-font-smoothing: antialiased;
     display: inline-block;
