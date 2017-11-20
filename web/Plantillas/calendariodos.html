@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Calendario</title> 
+        <link rel="stylesheet" type="text/css" href="../css/calendariodos.css" media="all" />
+        <script type="text/javascript" src="../js/calendariodos.js"></script>
+    </head>
+    <body>
+        
+        <div id="calendario">
+            <div id="anterior" onclick="mesantes()"></div>
+            <div id="posterior" onclick="mesdespues()"></div>
+            <h2 id="titulos"></h2>
+            <table id="diasc">
+                <tr id="fila0"><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+                <tr id="fila1"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr id="fila2"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr id="fila3"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr id="fila4"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr id="fila5"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr id="fila6"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </table>
+            <div id="fechaactual"><i onclick="actualizar()">Hoy: </i></div>
+            <div id="buscafecha">
+                <form action="#" name="buscar">
+                    <p>
+                        <select name="buscames">
+                            <option value="0">Enero</option>
+                            <option value="1">Febrero</option>
+                            <option value="2">Marzo</option>
+                            <option value="3">Abril</option>
+                            <option value="4">Mayo</option>
+                            <option value="5">Junio</option>
+                            <option value="6">Julio</option>
+                            <option value="7">Agosto</option>
+                            <option value="8">Septiembre</option>
+                            <option value="9">Octubre</option>
+                            <option value="10">Noviembre</option>
+                            <option value="11">Diciembre</option>
+                        </select>
+
+                        <select name="buscaanno">
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                        </select>
+                        <input type="button" value="BUSCAR" onclick="mifecha()" />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

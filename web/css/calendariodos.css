@@ -1,0 +1,117 @@
+/*instrucciones generales*/
+* { 
+    margin: auto;
+}
+/*cabecera de la página*/
+h1 {
+    text-align: center; 
+    padding: 0.5em; 
+}
+/*div principal del calendario*/
+#calendario { 
+    border: 4px double rgba(237, 2, 135, 0.3) ; 
+    max-width: 536px; 
+    background-color: rgba(255, 168, 243, 0.3);
+    text-align: center; 
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+/*tabla del calendario*/
+#diasc { 
+    border: 1px solid rgba(238, 92, 192, 0.5); 
+    border-collapse: separate; 
+    border-spacing: 4px; 
+    background-color: rgba(253, 88, 181, 0.54);
+    border-radius: 5px;
+    text-transform: uppercase;
+
+}
+#diasc th,#diasc td { 
+    width: 70px; 
+    height: 30px;
+    background-color: rgba(253, 88, 181, 0.54);
+}
+#diasc th {  
+    color: #FFFFFF; 
+}
+#diasc td { 
+    color: #492736; 
+}
+/*línea de la fecha actual*/
+#fechaactual { 
+    padding: 0.4em; 
+    color: rgba(237, 2, 80, 0.62);
+}
+
+#fechaactual i { 
+    cursor: pointer ; 
+}
+#fechaactual i:hover { 
+    color: rgba(237, 2, 80, 0.62);;
+    text-decoration: underline; 
+}
+/*formulario de busqueda de fechas*/
+#buscafecha {
+    background-color: rgba(191, 63, 101, 0.5); 
+    color: white; 
+    padding: 5px ;
+    font-family: 'Montserrat', sans-serif;
+}
+#buscafecha select, #buscafecha input  { 
+    font-family: 'Montserrat', sans-serif;
+
+    /*    background-color: rgb(250, 116, 201); 
+        color: #990099; 
+        cursor: pointer;*/
+    border-radius: 300px;
+    font-size: 11px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .5em .5em;
+    background-color: rgba(243, 62, 116, 0.82);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+#buscafecha [type=text]  { 
+    text-align: center; 
+}
+
+/*cabecera del calendario*/ 
+#anterior { 
+    font-family: 'Montserrat', sans-serif;
+
+    float: left;
+    width: 100px; 
+    padding: 0.5em 0.1em;
+    cursor: pointer ;
+    color: rgba(191, 63, 93, 0.9);
+}
+#posterior { 
+    font-family: 'Montserrat', sans-serif;
+
+    float: right; 
+    width: 100px; 
+    padding: 0.5em 0.1em;
+    cursor: pointer ;
+    color: rgba(191, 63, 93, 0.9);
+}
+#anterior:hover {
+    color: rgba(191, 63, 93, 0.9);
+    text-decoration: underline;
+}
+#posterior:hover {
+    color: rgba(191, 63, 93, 0.9); 
+    text-decoration: underline;}
+#titulos {
+    padding: 0.2em; 
+    color: rgba(237, 2, 80, 0.62);
+}
