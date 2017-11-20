@@ -45,6 +45,9 @@
                 formulario2.casilla2.value = eval(valor + delta);
 
             }
+            function calen() {
+                document.all("windowcal").src = "calendariodos.html";
+            }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -190,14 +193,17 @@
 
                             </td>
                             <td>
-                                <span class="btn2 btnR2 btnpos fa fa-calculator"></span>
+                                <span class="btn2 btnR2 btnpos fa fa-calculator" onclick="calen();"></span>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="frame">
-                <iframe width="300" height="300" id="window"></iframe>
+                <iframe width="300" height="400" src="../css/images/calendario.png" name="cal" id="windowcal"></iframe>
+            </div>
+            <div class="frame">
+                <iframe width="300" height="400" src="../css/images/ciclo.png" name="cal" id="windowciclo"></iframe>
             </div>
         </div>
     </body>
