@@ -12,7 +12,45 @@
         <link href="../css/TimeLine.css" rel="stylesheet" type="text/css"/>
         <link href="../css/Calendario.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/jquery-ui.min.css">
+        <link rel="stylesheet" href="../css/images/">
+        <style>
+            #textofecha{
+                font-size: 15px;
+                font-family:'Montserrat', sans-serif;
+                color: #D37E71;
+                background: rgb(238, 238, 238);
+                border: 1px solid rgba(60, 144, 240, 0.78);
+                border-radius: 5px;
+                height: 20px;
+                width: 90%;
+            }
+        </style>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/datepicker-es.js"></script>
 
+        <script type="text/javascript">
+            $(function () {
+                $('#textofecha').datepicker({
+                    changeYear: true,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    showButtonPanel: true
+                });
+
+                $('#date-button').on('click', function () {
+                    $('#textofecha').datepicker('show');
+                });
+            });
+            function add(delta) {
+
+                valor = eval(formulario.casilla.value);
+
+                formulario.casilla.value = eval(valor + delta);
+
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -138,13 +176,16 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="btncalen btnRCalen btnpos fa fa-calendar-check-o"></span>
+                                <input type="text" id="textofecha"/>
+                                <button id="date-button" class="btncalen btnRCalen btnpos fa fa-calendar-check-o"></button>
                             </td>
                             <td>
-                                <span class="btnplusmin btnR2td btnpos fa fa-minus"></span> 
-                                <span class="spannums btnR2td btnpos">1</span>
-                                <span class="btnplusmin btnR2td btnpos fa fa-plus"></span>
-                            </td>
+                                <form name="formulario">
+                                <span class="btnplusmin btnR2td btnpos fa fa-minus" onClick="add(-1);"> </span>
+                                <input type="text" class="spannums btnR2td btnpos" name="casilla" value="1"/>
+                                <span class="btnplusmin btnR2td btnpos fa fa-plus" onClick="add(1);"></span>
+                                </form>
+                                </td>
                             <td>
                                 <span class="btnplusmin2 btnR3td btnpos fa fa-minus"></span> 
                                 <span class="spannums2 btnR3td btnpos">1</span>
@@ -154,37 +195,6 @@
                                 <span class="btn2 btnR2 btnpos fa fa-calculator"></span>
                             </td>
                         </tr>
-                        <!--
-                        <tr>
-                            <td><p class="subtititle">
-                                    Fecha del inicio de tu último periodo 
-                                </p>
-
-                                <button type="button" class="btncalen btnR btnpos fa fa-calendar-check-o"></button>  
-                            </td>
-                            <td>
-                                <p class="subtititle">
-                                    Duración de tu último periodo
-                                </p>
-                                <br>
-                                <span class="btnplusmin btnR btnpos fa fa-minus"></span> 
-                                <span class="spannums btnR btnpos">1</span>
-                                <span class="btnplusmin btnR btnpos fa fa-plus"></span>
-                            </td>
-                            <td>
-                                <p class="subtititle">
-                                    Duración de tu ciclo menstrual
-                                </p>
-                                <br>
-                                <span class="btnplusmin btnR btnpos fa fa-minus"></span> 
-                                <span class="spannums btnR btnpos">1</span>
-                                <span class="btnplusmin btnR btnpos fa fa-plus"></span>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btnR btnpos">Generar</button>  
-                            </td>
-                        </tr>
-                        -->
                     </table>
                 </div>
             </div>
