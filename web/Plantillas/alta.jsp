@@ -107,7 +107,7 @@
                             + "values('" + nombre + "','" + apellidos + "','" + correo + "', '" + username + "','" + contra + "','" + objeto +"','" + ip + "');");
                     con.close();
                     session.setAttribute("usuario", username);
-                    session.setAttribute("contra", contra);
+                    session.setAttribute("contrasenia", contra);
                     session.setAttribute("ImagenPerfil", objeto);
                     out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/redireccionar.jsp';</script>");
                 }

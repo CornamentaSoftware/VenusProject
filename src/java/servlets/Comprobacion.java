@@ -48,7 +48,7 @@ public class Comprobacion extends HttpServlet {
                 String contrabase = buscarContra(user, contra);
                
 		if (correobase.equals(correo) && contrabase.equals(pass)) {
-			actualizarip(ip, resp);
+			actualizarip(ip, user, contra, resp);
                         sesion.setAttribute("IP", ip);
                         
                         response(resp, "<script>alert('Tu comprobación es correcta');"
@@ -108,7 +108,7 @@ public class Comprobacion extends HttpServlet {
         return contrasenia;
     }
         
-        public void actualizarip(String ip, HttpServletResponse resp)
+        public void actualizarip(String ip, String user, String contra, HttpServletResponse resp)
             throws ServletException, IOException {
             try{
                 Conexion conect = new Conexion();
@@ -116,12 +116,14 @@ public class Comprobacion extends HttpServlet {
                 Statement stm = null;
                 stm = (Statement) conexion.createStatement();
                 
-                stm.executeUpdate("insert into Usuario(IP_Usuario)"
-                        + "values('"+ip+"');");
+                stm.executeUpdate("update usuario SET IP_Usuario='"+ip+"'"
+                        + " where Username_Usuario='"+user+"' and Contrasenia_Usuario='"+contra+"';");
+                response(resp, "hola");
                 conexion.close();
                 }catch(SQLException ex){
+                    response(resp, ex.toString());
                     response(resp, "<script>alert('Ha ocurrido un error con la actualizacion de tu nuevo equipo');"
-                       + "window.location.href = 'http://localhost:8080/VenusProject/Plantillas/Ingresar.html';</script>");
+                       + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");
                 }
         }
         

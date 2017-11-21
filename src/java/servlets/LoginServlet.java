@@ -58,15 +58,12 @@ public class LoginServlet extends HttpServlet {
                         sesion.setAttribute("IP", ipusuario);
                         String imagen=buscarImagen(user, pass);
                         sesion.setAttribute("ImagenPerfil", imagen);
-                           
-                        Date now = new Date();
-                        DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);
                         
-                        if (!ipusuario.equals(ipbase)) {
+                        if (ipusuario.equals(ipbase)) {
                             resp.sendRedirect("http://localhost:8084/VenusProject/Plantillas/Menu.jsp");
                         } else {
-                            response(resp, "<script>alert('Se ha iniciado sesión por última vez en otro equipo, es necesario validar la sesión');"
-                                    + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Comprobacion.jsp;</script>");
+                           response(resp, "<script>alert('Se ha iniciado sesión por última vez en otro equipo, es necesario validar la sesión');"
+                       + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Comprobacion.jsp';</script>");
                         }
 		} else {
 			response(resp, "<script>alert('La sesion es inválida o no existe');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Ingresar.html';</script>");   
@@ -80,7 +77,7 @@ public class LoginServlet extends HttpServlet {
         InetAddress address;
             try {
                 address = InetAddress.getLocalHost();
-                ip=("IP Local :"+address.getHostAddress());
+                ip=(address.getHostAddress());
             } catch (UnknownHostException ex) {
                 Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
             }

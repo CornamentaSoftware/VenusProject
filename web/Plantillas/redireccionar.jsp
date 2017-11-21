@@ -19,7 +19,7 @@
     <body onload="mandar()">
         <%
             String usuario = (String) session.getAttribute("usuario");
-            String contrasenia = (String) session.getAttribute("contra");
+            String contrasenia = (String) session.getAttribute("contrasenia");
         %>
         <form name="formulario" action="http://localhost:8084/VenusProject/LoginServlet" method="POST">
             <div>

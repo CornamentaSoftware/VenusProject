@@ -34,6 +34,7 @@
                 <div class="ochenta"><br><br>
                     <form action="../Comprobacion" method="POST"name="formulario">
                         Confirmar usuario:<br><br>
+                        <input type="text" placeholder="Username" name="user">
                         <input type="text" placeholder="Correo electronico" name="correo">
                         <input type="password" placeholder="Contraseña" name="contra"><br><br>
                         <center><button onclick="comprobar()">Confirmar</button>
