@@ -96,10 +96,10 @@
             }
 
             try {
-                result = sta.executeQuery("Select * from usuario where Username_Usuario = '" + username + "';");
+                result = sta.executeQuery("select * from usuario where Username_Usuario = '" + username + "';");
                 if(result.first()){
-                    //out.println("<script>alert('Ya existe este username dentro del sistema');"
-                    //        + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
+                    out.println("<script>alert('Ya existe este username dentro del sistema');"
+                            + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
                 }
                 else{
                     sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, "

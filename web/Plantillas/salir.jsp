@@ -14,7 +14,7 @@
     <body>
         <%
         session.invalidate();
-        response.sendRedirect("http://localhost:8080/VenusProject/Plantillas/Inicio.html");
+        response.sendRedirect("http://localhost:8084/VenusProject/Plantillas/Inicio.html");
         %>
         
         <h1>Hello World!</h1>

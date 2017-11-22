@@ -133,7 +133,7 @@
                 </div>
                 <ul class="ca-menu"> 
                     <li class="chico">
-                        <a href="Inicio.html">
+                        <a href="salir.jsp">
                             <span class="fa fa-sign-out" id="H"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">Salir</h2>
