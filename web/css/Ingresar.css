@@ -2,7 +2,7 @@
     width: 50%;
     margin: 25%;
     border-radius: 5px;
-    margin-top: 10%;
+    margin-top: 8%;
     height: 53%;
     background-color: #d8847c;
     position: absolute;
@@ -45,8 +45,6 @@
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    height: 100%;
-    width: 100%;
     margin: 0px;
     color: rgba(255, 255, 255, 0.52);
 }
@@ -111,14 +109,14 @@ input{
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
 }
 .sesenta{
-    height: 60%;
+    height: 65%;
     width: 58%;
     margin-left: 21%;
 }
 .R{
     width: 100%;
     color: rgba(255, 255, 255, 0.52);
-    margin-bottom: 8%;
+    margin-bottom: 7%;
     font-family: 'Raleway', sans-serif;
     border-top: 0;
     border-left: 0;
@@ -128,4 +126,40 @@ input{
     padding: 2px;
     border-radius: 2px;
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.nada{
+    margin: 0px;
+    float:left;
+    width: 70%;
+}
+.inputfile {
+    height: auto;
+    opacity: 0;
+    padding-bottom: 6%;
+    margin-left: -93%;
+    margin-top: -5%;
+    float: left;
+    position: absolute;
+}
+label{
+    margin-bottom: 10px;
+}
+.subir{
+    margin-right: 10%;
+    z-index: 1;
+    float: left;
+    margin-left: 10%;
+}
+.iborrainputfile {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+    width: 95%;
+    font-size:18px;
+    font-family: 'Raleway', sans-serif;
+    padding: 2px;
+    float: left;
+    z-index: 0;
+    text-align: center;
+}
+.iborrainputfile:hover{
+    background: rgb(231, 142, 133);
 }
