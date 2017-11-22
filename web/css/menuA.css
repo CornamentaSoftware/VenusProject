@@ -115,22 +115,10 @@ body{
 }
 .ca-menu li:hover .ca-main{
     color: #B75041;
-    animation: moveFromLeftRotate 300ms ease;
 }
 .ca-menu li:hover{
     color: #B75041;
-    animation: moveFromBottom 500ms ease;
 }
-
-@keyframes moveFromLeftRotate{
-    from {
-        transform: translateX(-100%) rotate(-90deg);
-    }
-    to {
-        transform: translateX(0%) rotate(0deg);
-    }
-}
-
 .Bienvenida{
     background: rgba(0, 167, 120, 0.3);
     margin-top: 20px;
