@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat|Raleway" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
+        <link href="../font-Awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <script src="../JS/subirArchivo.js" type="text/javascript"></script>
         <script>
             
             var conf1=false;
@@ -199,8 +201,13 @@
                         <input type="password" class="R" placeholder="Contraseña" name="contrasenia" maxlength="30" id="con1" required>
                         <input type="password" class="R" placeholder="Confirmar Contraseña" name="confcontrasenia" id="con2" maxlength="30" required>
                         <input type="text" class="R" placeholder="Correo electrónico" name="correo" id="corr" maxlength="30" required><br>
-                        <input type="file" name="fichero" accept=".jpg, .jpeg, .png" id="imagen" required>
-                        <center><button onclick="validarcontra(), soloCorreo(), llevar(), llenado()">Registrarse</button></center>
+                        <span class="iborrainputfile" id="valor">
+                            <i class="fa fa-upload subir"></i>
+                            <p class="nada" id="texto">Seleccionar imagen perfil</p>
+                            <input type="file" name="fichero" accept=".jpg, .jpeg, .png" id="imagen" onchange="cambia();" class="inputfile" required=""/>
+                        </span>
+                        <br><br><br>
+                        <center><button onclick="validarcontra(), soloCorreo(), llevar(), llenado()">Registrarse</button></center><br>
                     </form>
                 </div>
             </div>
