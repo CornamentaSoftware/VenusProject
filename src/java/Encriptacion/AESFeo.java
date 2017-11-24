@@ -14,37 +14,37 @@ import sun.misc.BASE64Encoder;
 public class AESFeo {
 
     static String correoUsuario="";
-    static char a, b, c, d;
+    static byte a, b,c,d;
     
     private static final String Algo = "AES";
-    private static final byte[] keyValue = new byte[]{a,b,c,d,a,b,c,d,a,b,c,d,a,b,c,d};
+    private static byte[] keyValue = new byte[]{a,b,c,d,a,b,c,d,a,b,c,d,a,b,c,d};
 
-    public static String encrypt(String Data, String username) throws Exception {
-        correoUsuario = buscarCorreo(username, Data);
-        a=caractera();
-        b=caracterb();
-        c=caracterc();
-        d=caracterd();
+    public static String encrypt(String contrasenia, String correo) throws Exception {
+        a=caractera(correo);
+        b=caracterb(correo);
+        c=caracterc(correo);
+        d=caracterd(correo);
+        
+        System.out.println("hola");
         
         Key key = generateKey();
         Cipher c = Cipher.getInstance(Algo);
         c.init(Cipher.ENCRYPT_MODE, key);
-        byte[] encValores = c.doFinal(Data.getBytes());
+        byte[] encValores = c.doFinal(contrasenia.getBytes());
         String encriptadoValores = new BASE64Encoder().encode(encValores);
         return encriptadoValores;
     }
 
-    public static String decrypt(String encryptData, String username) throws Exception {
-        correoUsuario = buscarCorreo(username, encryptData);
-        a=caractera();
-        b=caracterb();
-        c=caracterc();
-        d=caracterd();
+    public static String decrypt(String contrasenia, String correo) throws Exception {
+        a=caractera(correo);
+        b=caracterb(correo);
+        c=caracterc(correo);
+        d=caracterd(correo);
         
         Key key = generateKey();
         Cipher c = Cipher.getInstance(Algo);
         c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decodificarValores = new BASE64Decoder().decodeBuffer(encryptData);
+        byte[] decodificarValores = new BASE64Decoder().decodeBuffer(contrasenia);
         byte[] descifrarvalores= c.doFinal(decodificarValores);
         String decodificartexto = new String(descifrarvalores);
         return decodificartexto;
@@ -55,59 +55,49 @@ public class AESFeo {
         return key;
     }
     
-    public static String buscarCorreo(String user, String contra){
-            String correo="";
-                try{
-                    Conexion c = new Conexion();
-                    Connection con = c.getConexion();
-                    
-                    if (con!=null){
-                        String sql = "SELECT * FROM usuario WHERE"
-                                + " Username_Usuario='"+user+"' && "
-                                + "Contrasenia_Usuario='"+contra+"';";
-                        PreparedStatement ps = con.prepareStatement(sql);
-                        ResultSet rs = ps.executeQuery(); 
-                        
-                        if (rs.next()){
-                            correo = rs.getString("Correo_Usuario");
-                        }
-                        c.cerrarConexion();
-                    }
-                }
-                catch(SQLException e){
-                    e.printStackTrace();
-                }
-        return correo;
-        }
-    
-    public static char caractera(){
+    public static byte caractera(String correoUsuario){
         char a = 0;
+        byte b=0;
         
         a=correoUsuario.charAt(0);
+        b=Convertir(a);
         
-        return a;
+        return b;
     }
     
-    public static char caracterb(){
+    public static byte caracterb(String correoUsuario){
         char a = 0;
+        byte b=0;
         
         a=correoUsuario.charAt(1);
+        b=Convertir(a);
         
-        return a;
+        return b;
     }
     
-    public static char caracterc(){
+    public static byte caracterc(String correoUsuario){
         char a = 0;
+        byte b=0;
         
         a=correoUsuario.charAt(2);
+        b=Convertir(a);
         
-        return a;
+        return b;
     }
     
-    public static char caracterd(){
+    public static byte caracterd(String correoUsuario){
         char a = 0;
+        byte b=0;
         
         a=correoUsuario.charAt(3);
+        b=Convertir(a);
+        
+        return b;
+    }
+    
+    public static byte Convertir(char owp){
+        byte a=0;
+        a=(byte)owp;
         
         return a;
     }

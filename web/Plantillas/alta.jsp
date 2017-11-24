@@ -104,7 +104,7 @@
                 }
                 else{
                     AES cifrar = new AES();
-                    String contracifrada = cifrar.Encriptar(username, contra);
+                    String contracifrada = cifrar.Encriptar(contra, username);
                     
                     sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, "
                             + "Contrasenia_Usuario, Imagen_Usuario, IP_Usuario)"
@@ -115,7 +115,7 @@
                     session.setAttribute("ImagenPerfil", objeto);
                     out.println("<script>alert('Registrado con éxito');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/redireccionar.jsp';</script>");
                 }
-            } catch (SQLException error) {
+            } catch (SQLException error) {     
                 out.println("<script>alert('Ha ocurrido un error con tu alta');window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
             }
             con.close();

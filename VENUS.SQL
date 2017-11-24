@@ -90,7 +90,7 @@ CREATE TABLE `usuario` (
   `Apellido_Usuario` varchar(70) DEFAULT NULL,
   `Correo_Usuario` varchar(70) NOT NULL,
   `Username_Usuario` varchar(70) NOT NULL,
-  `Contrasenia_Usuario` varchar(20) NOT NULL,
+  `Contrasenia_Usuario` varchar(100) NOT NULL,
   `Imagen_Usuario` varchar(100) DEFAULT NULL,
   `IP_Usuario` varchar(20) NOT NULL,
   PRIMARY KEY (`Id_Usuario`)

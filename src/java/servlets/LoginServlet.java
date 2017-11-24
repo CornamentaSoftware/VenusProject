@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import Encriptacion.AES;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.InetAddress;
@@ -35,7 +36,14 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String user = req.getParameter("user");
-		String pass = req.getParameter("contra");
+		String password = req.getParameter("contra");
+                AES cifrar = new AES();
+                String pass="";
+                try {
+                    pass = cifrar.Encriptar(password, user);
+                } catch (Exception ex) {
+                    Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 
                 Base comp = new Base();
                 

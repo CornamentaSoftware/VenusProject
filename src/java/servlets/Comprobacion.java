@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import Encriptacion.AES;
 import com.mysql.jdbc.Statement;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -37,10 +38,18 @@ public class Comprobacion extends HttpServlet {
 			throws ServletException, IOException {
             
                 HttpSession sesion = req.getSession(true);
+                String user = (String) sesion.getAttribute("usuario");
                 
 		String correo = req.getParameter("correo");
-		String pass = req.getParameter("contra");
-                String user = (String) sesion.getAttribute("usuario");
+		String password = req.getParameter("contra");
+                AES cifrar = new AES();
+                String pass="";
+                try {
+                    pass = cifrar.Encriptar(password, user);
+                } catch (Exception ex) {
+                    Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 String contra = (String) sesion.getAttribute("contrasenia");
                 String ip = (String) sesion.getAttribute("IP");
       
