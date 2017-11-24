@@ -5,8 +5,8 @@ package Encriptacion;
 public class AES {
 
     
-    public String Encriptar(String password) throws Exception{
-        String passwordEnc=AESFeo.encrypt(password);
+    public String Encriptar(String username, String password) throws Exception{
+        String passwordEnc=AESFeo.encrypt(password, username);
         return passwordEnc;
     }
     

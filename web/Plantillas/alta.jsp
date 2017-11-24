@@ -4,6 +4,7 @@
     Author     : rodri
 --%>
 
+<%@page import="Encriptacion.AES"%>
 <%@page import="java.util.Set"%>
 <%@page import="servlets.LoginServlet"%>
 <%@page import="java.util.logging.Logger"%>
@@ -102,9 +103,12 @@
                             + "window.location.href = 'http://localhost:8084/VenusProject/Plantillas/Registrarse.html';</script>");
                 }
                 else{
+                    AES cifrar = new AES();
+                    String contracifrada = cifrar.Encriptar(username, contra);
+                    
                     sta.executeUpdate("insert into Usuario(Nombre_Usuario, Apellido_Usuario, Correo_Usuario, Username_Usuario, "
                             + "Contrasenia_Usuario, Imagen_Usuario, IP_Usuario)"
-                            + "values('" + nombre + "','" + apellidos + "','" + correo + "', '" + username + "','" + contra + "','" + objeto +"','" + ip + "');");
+                            + "values('" + nombre + "','" + apellidos + "','" + correo + "', '" + username + "','" + contracifrada + "','" + objeto +"','" + ip + "');");
                     con.close();
                     session.setAttribute("usuario", username);
                     session.setAttribute("contrasenia", contra);

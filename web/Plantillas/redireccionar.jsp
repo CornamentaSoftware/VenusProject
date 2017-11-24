@@ -23,8 +23,8 @@
         %>
         <form name="formulario" action="http://localhost:8084/VenusProject/LoginServlet" method="POST">
             <div>
-                <input type="text" name="user" value="<%=usuario%>">
-                <input type="text" name="contra" value="<%=contrasenia%>">
+                <input type="text" name="user" value="<%=usuario%>" visibility="hidden">
+                <input type="text" name="contra" value="<%=contrasenia%>" visibility="hidden">
             </div>
         </form>
     </body>
