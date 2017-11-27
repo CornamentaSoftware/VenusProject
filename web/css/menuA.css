@@ -1,14 +1,6 @@
 body{
     font-family: 'Raleway', sans-serif;
 }
-.bien{
-    font-size: 14px;
-    color: #FF8D72;
-    text-align: center;
-    position: relative;
-    padding-left: 200px;
-    float: left;
-}
 .letraReloj{
     font-size: 14px;
     color: #FF8D72;
@@ -119,6 +111,7 @@ body{
 .ca-menu li:hover{
     color: #B75041;
 }
+
 .Bienvenida{
     background: rgba(0, 167, 120, 0.3);
     margin-top: 20px;
