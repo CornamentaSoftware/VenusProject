@@ -1,0 +1,81 @@
+.cuerpoNuevo{
+    height: 91%;
+    width: 55%;
+    float: left;
+    position: absolute;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+.Usuarios{
+    margin-top: 50px;
+    height: 65%;
+}
+.Nombre{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+.usuario{
+    font-size: 14px;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+.user{
+    border: none;
+    border-top: 1.5px solid #bfbdbd;
+    padding: 10px;
+    height: 16%;
+    width: 96%;
+    background: none;
+}
+.user:hover{
+    background: #E7E4E4;
+}
+.user Img{
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 15px;
+    float: left;
+}
+.inputBuscar{
+    width: 75.5%;
+    color: black;
+    margin-left: 0px;
+    margin-top: -15px;
+    position: absolute;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 16% 15px 10%;
+    border: 1.5px solid #ccc;
+    border-radius: 23px;
+    background: #f4f2f2;
+}
+.inputBuscar:focus{
+    outline:0px;
+}
+.icono{
+    font-size: 25px;
+    position: absolute;
+    float:left;
+    margin-right:10px;
+    margin-left: 20px;
+    margin-top: -4px;
+    z-index: 1;
+}
+.iconoBuscar{
+    font-size: 20px;
+    color:#BA6359;
+}
+.buscar{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.R{
+    height: 40px;
+}
