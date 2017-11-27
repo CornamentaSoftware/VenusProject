@@ -4,9 +4,17 @@
         <servlet-name>servletSession</servlet-name>
         <servlet-class>servlets.servletSession</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CAcceso</servlet-name>
+        <servlet-class>servlets.CAcceso</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>servletSession</servlet-name>
         <url-pattern>/servletSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CAcceso</servlet-name>
+        <url-pattern>/CAcceso</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
