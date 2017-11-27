@@ -1,17 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>Chats</title>
-        <meta charset="UTF-8">
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <link rel="stylesheet" href="../css/menuA.css" type="text/css"/>
+        <link href="../css/Chats/nuevoChat.css" rel="stylesheet" type="text/css"/>
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../css/menu.css" type="text/css">
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/desplegar.js" type="text/javascript"></script>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/detalles.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
-        <link href="../css/Chats/Chats.css" rel="stylesheet" type="text/css"/>
+        <title>Venus</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -114,41 +121,36 @@
             </nav>
         </div>
         </div>
-        <div class="msjChats">
-            <div class='marginBottom'>
-            <p class="LobsterTwo color46373f">Chats privados</p>
-            <p class="Raleway marginBottom0 left">Selecciona algún chat o crea uno nuevo...</p>
-            <button class="btnFont right" id='nuevo' onclick="location.href='NuevoChat.html';">Crear chat</button>
+        <div class="cuerpoNuevo">
+            <p class="Pacifico fontsize60">Crear chat</p>
+            <button class="btnFont desactivado right" id='sig' onclick="location.href='NuevoChat2.html';">Siguiente</button>
+            <p class="Raleway">Selecciona a los usuarios que deseas agregar al chat</p>
+            <div class="buscar">
+                <div class="icono">
+                    <spam class="fa fa-search iconoBuscar" aria-hidden="true"></spam>
+                </div>
+                <input type="text" class="inputBuscar" placeholder="Buscar usuarios">
+                <a id="search-clear" href="#" class="fa fa-times-circle hide" aria-hidden="true"></a>
             </div>
-            <form class='Chats left' action="Chat.html">
-                <button class='nadaButton' type="submit">
-                    <div class="veinte2">
-                    <img src="../Img/Chats/2.jpg" alt=""/>
-                    </div>
-                    <div class='datosChat'>
-                    <p class="Pacifico">MA'S</p>
-                    <p class="Raleway margin0">Gabby: ¿Cúando nos vemos?💃</p>
-                    <p class="Raleway margin0">1 día</p>
-                    </div>
-                </button>
-            </form>
-            <form class='Chats left' action="Chat.html">
-                <button class='nadaButton' type="submit">
-                    <div class="veinte2">
-                    <img src="../Img/Chats/chats2.PNG" alt=""/>
-                    </div>
-                    <div class='datosChat'>
-                    <p class="Pacifico">Cornamenta</p>
-                    <p class="Raleway margin0">Marbella: ¿ia hicieron algo?</p>
-                    <p class="Raleway margin0">10 días</p>
-                    </div>
-                </button>
-            </form>
-        </div>
-        <div class="opciones">
-            <div class="contOpc">
-            <button class="btn btnSRSH" onclick="location.href='ChatsPrivados.html';">Privados</button>
-            <button class="btn btnR" onclick="location.href='ChatsPublicos.html';">Públicos</button>
+            <div class="Usuarios">
+                <div class="user">
+                    <input type="checkbox" class="plus">
+                    <img src="../Img/Chats/Danny.jpg" alt=""/>
+                    <p class="Nombre">Daniela Corona</p>
+                    <p class="usuario">@DannyCorona23</p>
+                </div>
+                <div class="user">
+                    <input type="checkbox" class="plus">
+                    <img src="../Img/Chats/Calixto.jpg" alt=""/>
+                    <p class="Nombre">Jime Calixto</p>
+                    <p class="usuario">@JimenaC</p>
+                </div>
+                <div class="user">
+                    <input type="checkbox" class="plus">
+                    <img src="../Img/Chats/Gabby.jpg" alt=""/>
+                    <p class="Nombre">Gabby Salazar</p>
+                    <p class="usuario">@LayshaAyala</p>
+                </div>
             </div>
         </div>
     </body>

@@ -7,12 +7,13 @@
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../css/menu.css" type="text/css">
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
-        <script src="../css/desplear.js" type="text/javascript"></script>
+        <script src="../JS/desplegar.js" type="text/javascript"></script>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat|Raleway|Lobster+Two" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Lobster|Raleway|Lobster+Two|Petit+Formal+Script|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
         <link href="../css/Chats/Chats.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/Chats/chatsPublicos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="MenuA">
@@ -114,23 +115,78 @@
             </nav>
         </div>
         </div>
-        <div class="InicioChats">
-            <img src="../Img/Chats/chats1.png" class="a" alt=""/>
-            <img src="../Img/Chats/chats9.png" class="b" alt=""/>
-            <img src="../Img/Chats/chats8.png" class="c" alt=""/>
-            <img src="../Img/Chats/chats4.png" class="d" alt=""/>
-            <img src="../Img/Chats/chats7.png" class="e" alt=""/>
-            <img src="../Img/Chats/chats6.png" class="f" alt=""/>
-            <img src="../Img/Chats/chats5.png" class="g" alt=""/>
-            <img src="../Img/Chats/chats10.png" class="h" alt=""/>
-                <div class="texto">
-                <p class="LobsterTwo color46373f">Chats</p>
-                <p class="Raleway pequeño">Siéntete libre de compartir lo que sea</p>
+        <div class="msjChats">
+            <div class='marginBottom'>
+            <p class="LobsterTwo color46373f">Chats p&uacuteblicos</p>
+            <p class="Raleway marginBottom0 left">Selecciona alg&uacuten chat o crea uno nuevo...</p>
+            <button class="btnFont right" id='nuevo' onclick="location.href='NuevoChatPublico.html';">Crear chat</button>
+            </div>
+            <form class='Chats left' action="Chat.html">
+                <button class='nadaButton' type="submit">
+                    <div class="veinte1">
+                        <img src="../Img/Chats/chismes.png" alt=""/>
+                    </div>
+                    <div class='datosChat'>
+                    <p class="Pacifico fontsize25">Chismes y más chismes</p>
+                    <p class="Raleway margin0">@DianaAlessandra: ¿Qué harían si estuvieran en mis zapatos?😰</p>
+                    <p class="Raleway margin0">1 día</p>
+                    </div>
+                </button>
+            </form>
+        </div>
+        <div class="otrosChats">
+            <div class='marginBottom'>
+            <p class="Raleway Busca">¿Estás buscando nuevos chats?</p>
+            <p class="Raleway marginBottom0 left">Busca algún nombre o descripción en particular</p>
+            <div class="buscar">
+                <div class="icono">
+                    <spam class="fa fa-search iconoBuscar" aria-hidden="true"></spam>
                 </div>
+                <input type="text" class="inputBuscar" placeholder="Buscar chats">
+            </div>
+            </div>
+            <form class='Chats2 left' action="ChatsPublicos.html">
+                <button class='nadaB' type="submit">
+                    <span class="plus fa fa-plus btnFont btnSRSH"></span>
+                    <div class="veinte">
+                        <img src="../Img/Chats/corazon.jpg" alt=""/>
+                    </div>
+                    <div class='datosC'>
+                    <p class="Pacifico textleft Margin-30">Consejos de amor</p>
+                    <p class="Raleway margin0 textleft">Cuéntanos tus problemas y estamos dispuestas a ayudarte. Hay que divertirnos en el proceso de enamoramiento</p>
+                    </div>
+                </button>
+            </form>
+            <form class='Chats2 left' action="ChatsPublicos.html">
+                <button class='nadaB' type="submit">
+                    <span class="plus fa fa-plus btnFont btnSRSH"></span>
+                    <div class="veinte">
+                        <img src="../Img/Chats/compras.jpg" alt=""/>
+                    </div>
+                    <div class='datosC'>
+                    <p class="Pacifico textleft Margin-30">Adictas a las compras</p>
+                    <p class="Raleway margin0 textleft">Un pequeño pasatiempo, compártenos tus pasiones y déjanos ayudarte a elegir lo mejor</p>
+                    </div>
+                </button>
+            </form>
+            <form class='Chats2 left' action="ChatsPublicos.html">
+                <button class='nadaB' type="submit">
+                    <span class="plus fa fa-plus btnFont btnSRSH"></span>
+                    <div class="veinte">
+                        <img src="../Img/Chats/tragame.jpg" alt=""/>
+                    </div>
+                    <div class='datosC'>
+                    <p class="Pacifico textleft Margin-30">Trágame tierra</p>
+                    <p class="Raleway margin0 textleft">Acércate y cuéntanos qué te pasó para que hoy dijeras "Trágame tierra", pasa a reírte un poco</p>
+                    </div>
+                </button>
+            </form>
         </div>
         <div class="opciones">
+            <div class="contOpc">
             <button class="btn btnR" onclick="location.href='ChatsPrivados.html';">Privados</button>
             <button class="btn btnSRSH" onclick="location.href='ChatsPublicos.html';">Públicos</button>
+            </div>
         </div>
     </body>
 </html>
