@@ -17,7 +17,7 @@ import java.net.*;
  *
  * @author Alumno
  */
-public class CAcceso extends HttpServlet {
+public class CAcceso extends HttpServlet{
 
 
     @Override
@@ -29,8 +29,20 @@ public class CAcceso extends HttpServlet {
         String ip = address.getHostAddress();
         
         // Aquí se obtienen los datos del usuario que se enviarán al servidor de autenticacion
+        try{
+        mensaje();
+        }
+        catch (Exception e){}
         
         
+    }
+    
+    private void mensaje() throws Exception{
+        InetAddress ipAS= InetAddress.getByName("");
+        //Dentro de las comillas va la IP del servidor de autenticacion que debe tener una máquina definida,
+        //pero por ahora no tiene :p
+        int puertoAS= 5000;
+        int miPuerto= 4000;
         
     }
 
