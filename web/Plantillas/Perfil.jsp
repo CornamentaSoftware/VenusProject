@@ -22,6 +22,9 @@
                 <img id="ppic" src="../Img/persona.png">
                 <p id="nombre">Nombre de Usuario</p>
                 <p id=""></p>
+                <form action="../CAcceso" method="post">
+                <input type="submit" value="Cambiar datos">
+                </form>
             </div>
             <div id="Contenido">
                 <div id="pub">
