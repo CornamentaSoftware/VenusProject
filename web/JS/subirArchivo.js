@@ -1,6 +1,6 @@
 function cambia(){
     var valor = document.getElementById("imagen").value;
-    document.getElementById("valor").value=valor;
+    document.getElementById("texto").innerHTML=valor;
 }
 
 

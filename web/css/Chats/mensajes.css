@@ -5,26 +5,56 @@
     border-left: 1.5px solid #bfbdbd;
     border-bottom: 1.5px solid #bfbdbd;
 }
-.todosEmojis{
-    width: 19%;
-    float: left;
-    padding: 10px;
-    position: absolute;
-    margin-left: 78%;
-    margin-top: 400px;
+.todaspest{
+    display:none;
     background-color: #ECE5E1;
     border-radius: 15px;
+    margin-left: -3.5%;
+    height: auto;
+    width: 105%;
+}
+.pest{
+    background-color: #ECE5E1;
+    border-radius: 15px;
+    display: none;
+    padding: 0px 10px 10px 10px;
+    width: 81.5%;
+    margin-top: 13px;
+    margin-left: -3.5%;
+    margin-right: 8.5%;
+    float: left;
+    position: absolute;
+    width: 90%;
+}
+.tipoEmoji{
+    padding: 2px 5px 2px 5px;
+    font-size: 18px;
+    width: 18%;
+    float: left;
+    background: none;
+    border: none;
+}
+.todosEmojis{
+    display:none;
+    margin-right: 5%;
+    border-radius: 15px;
+    display: table;
+    margin-top: 130%;
+    padding: 10px;
+    width: 90%;
+}
+.barraR{
+    height: 91%;
+    float: left;
+    position: absolute;
+    margin-left: 78.5%;
+    width: 18%;
 }
 .emojis{
     float: left;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    font-size: 20px;
-    transition: font-size 0.4s ease-in-out;
-}
-.emojis:hover{
-    font-size: 23px;
+    padding: 2px 5px 2px 5px;
+    font-size: 18px;
+    width: 18%;
 }
 .marginAuto{
     margin: auto;
@@ -71,6 +101,9 @@ textArea{
     float: left;
     text-align: left;
 }
+textArea:focus{
+    outline:0px;
+}
 .espacio10{
     height: 10px;
 }
@@ -112,23 +145,23 @@ textArea{
     background-color: #F4D0C6;
 }
 .Bcolord37e71bf{
-    background-color: #d37e71bf;
+    background-color: #D37E71;
 }
 .Bcolorefbeb1{
     background-color: #efbeb1;
 }
 .Bcolore56a74d9{
-    background-color: #e56a74d9;
+    background-color: #E56A74;
 }
 .colorF4D0C6{
     color: #F4D0C6;
 }
 .colord37e71bf{
-    color: #8c372abf;
+    color: #985147;
 }
 .colorefbeb1{
     color: #c37e6c;
 }
 .colore56a74d9{
-    color: #732027d9;
+    color: #732027;
 }

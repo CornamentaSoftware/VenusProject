@@ -10,8 +10,8 @@
     width: 55%;
     float: left;
     position: absolute;
-    margin-left: 22.5%;
-    margin-right: 22.5%;
+    margin-left: 21.5%;
+    margin-right: 21.5%;
 }
 .marginL{
     margin-left: 10%;
@@ -21,9 +21,8 @@
     margin-left: 5%;
 }
 .datosChat{
+    width: 75%;
     margin-left: 20px;
-    height: 80%;
-    margin-top: 3%;
     float: left;
 }
 .Chats{
@@ -36,12 +35,27 @@
 .Chats:hover{
     background-color: #e6e6e6;
 }
-.Chats img{
-    height: 80%;
+.veinte1{
+    width: 20%;
     float: left;
-    margin-top: 2%;
-    position: relative;
+}
+.veinte2{
+    width: 20%;
+    float: left;
+}
+.veinte2 Img{
     border-radius: 50%;
+    max-width: 70%;
+    height: auto;
+    width: auto/9; 
+    float: left;
+}
+.veinte1 Img{
+    border-radius: 50%;
+    max-width: 90%;
+    height: auto;
+    width: auto/9; 
+    float: left;
 }
 .Contenido{
     position: absolute;

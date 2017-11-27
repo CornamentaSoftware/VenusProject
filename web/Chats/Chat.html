@@ -1,0 +1,372 @@
+<html>
+    <head>
+        <title>Chats</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
+        <link rel="stylesheet" href="../css/menuA.css" type="text/css"/>
+        <link href="../css/General.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css">
+        <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
+        <script src="../JS/desplegar.js" type="text/javascript"></script>
+        <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
+        <link href="../css/Chats/Chats.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/mensajes.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../JS/emojis.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="MenuA">
+            <div class="Logo">
+                <img src="../Img/logo3.png" alt=""/>
+            </div>
+            <div class="Derecha">
+                <ul class="ca-menu">
+                    <li class="chico">
+                        <a href="Aplicacion/Aplicacion.jsp">
+                            <span class="fa fa-sign-out" id="H"></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Salir</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="grande">
+                        <a href="Practica/Practica.jsp">
+                            <span class="fa fa-bell" id="M"></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Notificaciones</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Venus">
+                Venus
+            </div>
+        </div>
+        <div class="Menu">
+        <div class="Abrir">
+            <button class="bars btnMenu" id="Abrir" style="visibility: hidden" onclick="w3_open()">
+                <i class="fa fa-bars"></i><p>Menú</p>
+            </button>
+        </div>
+        <div class="container" id="mySidebar">
+        <button onclick="w3_close()" class="btnMenu">
+            <i class="fa fa-times" aria-hidden="true"></i><p>Cerrar</p>
+        </button> 
+            <nav>
+                <ul class="mcd-menu">
+                    <li>
+                        <a href="">
+                            <i class="fa fa-home"></i>
+                            <strong>Home</strong>
+                            <small>sweet home</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-female"></i>
+                            <strong>Armario</strong>
+                            <small>Tu tesoro personal</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-calendar"></i>
+                            <strong>Calendario</strong>
+                            <small>Agenda tu día a día</small>
+                        </a>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-refresh"></i>Ciclo</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Chats.html" class="active">
+                            <i class="fa fa-comments-o"></i>
+                            <strong>Chats</strong>
+                            <small>Siéntete libre de hablar</small>
+                        </a>
+                        <ul>
+                            <li><a href="ChatsPublicos.html"><i class="fa fa-unlock-alt"></i>Públicos</a></li>
+                            <li><a href="ChatsPrivados.html"><i class="fa fa-lock"></i>Privados</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-picture-o"></i>
+                            <strong>Tutoriales</strong>
+                            <small>Aprende algo nuevo</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Chats.html">
+                            <i class="fa fa-user"></i>
+                            <strong>Perfil</strong>
+                            <small>Tu privacidad</small>
+                        </a>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-tags"></i>Mis outfits</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i>Intereses</a></li>
+                            <li><a href="#"><i class="fa fa-pencil"></i>Mis peticiones</a></li>
+                            <li><a href="#"><i class="fa fa-group"></i>Contactos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="msjChats">
+            <div class='infoChat'>
+                <img src="../Img/Chats/2.jpg" class="imgChat" alt=""/>
+                <p class="Pacifico50 color46373f left marginL5">MA'S</p>
+            </div>
+            <div class='Mensajes'>
+                <div class='espacio10'></div>
+                <div class='mensaje mensajeMiUsuario BcolorF4D0C6'>
+                    Hola <p class="Hora">10:10</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolord37e71bf'>
+                    <p class="nombre colord37e71bf">Calixto</p>
+                    Hace mucho que no hablamos <p class="Hora">10:20</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolorefbeb1'>
+                    <p class="nombre colorefbeb1">Danny</p>
+                    Ya sé, los extraño 💖<p class="Hora">10:22</p>
+                </div>
+                <div class='mensaje mensajeUsuario Bcolore56a74d9'>
+                    <p class="nombre colore56a74d9">Gabby</p>
+                    Cuándo nos vemos? 💃<p class="Hora">10:22</p>
+                </div>
+            </div>
+            <div class="msj">
+                <textarea placeholder="Escribe un mensaje..." id="textArea"></textarea>
+                <button class='iconos right marginR5 top5' onclick="emojis();">
+                    <i class="fa fa-smile-o emojisB" aria-hidden="true"></i>
+                </button>
+                <button class='iconos right marginR5 top20'>
+                    <i class="fa fa-paper-plane enviar" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="barraR">
+        <div class="todosEmojis" id='todosE'>
+            <div class="todaspest" id="todaspest">
+                <button class="tipoEmoji" onclick="vin(1);">😍</button>
+                <button class="tipoEmoji" onclick="vin(2);">💖</button>
+                <button class="tipoEmoji" onclick="vin(3);">🤘</button>
+                <button class="tipoEmoji" onclick="vin(4);">🦄</button>
+                <button class="tipoEmoji" onclick="vin(5);">🎶</button>
+                <button class="tipoEmoji" onclick="vin(6);">🙋</button>
+                <button class="tipoEmoji" onclick="vin(7);">🍕</button>
+                <button class="tipoEmoji" onclick="vin(8);">🏈</button>
+                <button class="tipoEmoji" onclick="vin(9);">🌈</button>
+                <button class="tipoEmoji" onclick="vin(10);">👗</button>
+                <button class="tipoEmoji" onclick="vin(11);">⚢</button>
+                <button class="tipoEmoji" onclick="vin(12);">🎆</button>
+                <button class="tipoEmoji" onclick="vin(13);">🔫</button>
+            </div>
+            <div class="pest" id="1">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😍</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😚</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😂</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😭</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😊</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😒</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😐</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😠</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😰</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😱</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😳</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😴</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🙊</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🙈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🙉</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤒</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💩</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👅</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👄</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💋</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">😈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👽</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💀</button>                
+            </div>
+            <div class="pest"  id="2">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">❤</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💖</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💘</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💞</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💛</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💚</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💙</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💜</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💗</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💟</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💌</button>
+            </div>            
+            <div class="pest" id="3">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👌</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🖕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤘</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👉</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👏</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💅</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤙</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤞</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👍</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👌</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👎</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">✋</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🖖</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤜</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🤛</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💪</button>
+            </div>           
+            <div class="pest" id="4">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐇</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐰</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐩</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🦄</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐷</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐽</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐶</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐘</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐣</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐱</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐠</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐢</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🐍</button>
+            </div>      
+            <div class="pest" id="5">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎤</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">♬</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎶</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎵</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎼</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎧</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎹</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📯</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎷</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎺</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📻</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎧</button>
+            </div>          
+            <div class="pest" id="6">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💁</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🙋</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🙅</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👯</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎎</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👵</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👩</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👰</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👭</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💃</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👶</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👼</button>
+            </div>            
+            <div class="pest" id="7">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍻</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍷</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍸</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍦</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍧</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍩</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍫</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍣</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍚</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍱</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍑</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍓</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍒</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍳</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍖</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍟</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍼</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">☕</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎂</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🍜</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">☕</button>
+            </div>            
+            <div class="pest" id="8">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">⚾</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🏐</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🏀</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🏈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🏉</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🏊</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎮</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎳</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">⛳</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎰</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎠</button>    
+            </div>           
+            <div class="pest" id="9">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌅</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌇</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💫</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">✨</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌙</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">⛄</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">☔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌂</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">⚡</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌚</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌝</button>
+            </div>           
+            <div class="pest" id="10">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👗</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👠</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👑</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👛</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎒</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👓</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👙</button>
+
+            </div>           
+            <div class="pest" id="11">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">⚢</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🔞</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">✔</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">✘</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌷</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌹</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🌺</button>
+            </div>          
+            <div class="pest" id="12">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎆</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎄</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">👻</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎉</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎅</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎈</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🎃</button>
+            </div>           
+            <div class="pest" id="13">
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🔥</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">💡</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🚬</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🔫</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🔪</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🃏</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">🔮</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📑</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📚</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📰</button>
+                <button class="iconos emojis left" onclick="emoji(innerHTML)">📆</button>
+            </div>           
+        </div>
+        </div>
+    </body>
+</html>

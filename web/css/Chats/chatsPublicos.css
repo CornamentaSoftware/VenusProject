@@ -1,0 +1,110 @@
+.msjChats{
+    width: 40%;
+}
+.size30{
+    font-size: 30px;
+}
+.textleft{
+    text-align: justify;
+}
+.otrosChats{
+    height: 91%;
+    float: right;
+    position: relative;
+    margin-right: 3%;
+    width: 30%;
+}
+.inputBuscar{
+    width: 100%;
+    margin-left: 5px;
+    margin-top: -15px;
+    position: absolute;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 16% 15px 10%;
+    border: 1.5px solid #ccc;
+    border-radius: 23px;
+    background: #f4f2f2;
+}
+.inputBuscar:focus{
+    outline:0px;
+}
+.icono{
+    font-size: 25px;
+    position: absolute;
+    float:left;
+    margin-right:10px;
+    margin-left: 20px;
+    margin-top: 0px;
+    z-index: 1;
+}
+.iconoBuscar{
+    font-size: 20px;
+    color:#BA6359;
+}
+.veinte{
+    width: 20%;
+    float: left;
+}
+.veinte Img{
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    width: auto/9; 
+    float: left;
+}
+.datosC{
+    float: left;
+    width: 75%;
+    margin-left: 5%;
+    float: left;
+}
+.Chats2{
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+    border-top: 1.5px solid #bfbdbd;
+    height: auto;
+}
+.Chats2:hover{
+    background-color: #e6e6e6;
+}
+.nadaB:hover .btnSRSH{
+    background: #fe7678;
+    color: #ffffff;
+}
+.Busca{
+    letter-spacing: 2px;
+    color: #E76F5E;
+    font-size: 25px;
+    margin:0px;
+    font-weight: 800;
+}
+.Margin-30{
+    margin-top: -30px;
+}
+.plus{
+    padding: 8px 8px 8px 10px;
+    float: right;
+    position: relative
+}
+.nadaB{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border:none;
+    background:none;
+    height:auto;
+    outline: none;
+}
+.otrosChats{
+    margin-top: 30px;
+}
+.buscar{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+    position: relative;
+    float: left;
+    margin-bottom: 50px;
+}
