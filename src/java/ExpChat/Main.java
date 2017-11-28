@@ -8,8 +8,12 @@ package ExpChat;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -33,6 +37,7 @@ public class Main extends javax.swing.JFrame implements Runnable {
     
     private void configurarventana(){
         setSize(500, 300);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
     
     private void initComponents(){
@@ -76,14 +81,22 @@ public class Main extends javax.swing.JFrame implements Runnable {
 
         while (ct == hilo2) {
 
-        mensaje=chats.recibir();
+            try {
+                mensaje=chats.recibir();
+            } catch (IOException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
         System.out.println(mensaje);
 
         }
 
         while (ct == hilo3) {
 
-        mensaje=chats.recibir();
+            try {
+                mensaje=chats.recibir();
+            } catch (IOException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
         System.out.println(mensaje);
 
         }
