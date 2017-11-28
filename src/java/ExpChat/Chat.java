@@ -5,7 +5,9 @@
  */
 package ExpChat;
 
+import java.io.IOException;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.util.Scanner;
 
 /**
@@ -32,7 +34,7 @@ public class Chat {
         }
     }
     
-    public String recibir(){
+    public String recibir() throws SocketException, IOException{
         int miPuerto = 3605;
         EnviayRecibe miSocket = new EnviayRecibe(miPuerto);
         String mensaje = miSocket.recibeMensaje();

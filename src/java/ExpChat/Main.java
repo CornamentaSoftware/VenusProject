@@ -5,13 +5,17 @@
  */
 package ExpChat;
 
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
+import javax.swing.JButton;
 
 /**
  *
  * @author Alumno
  */
-public class Main implements Runnable{
+public class Main extends javax.swing.JFrame implements Runnable {
     
     Thread hilo1;
 
@@ -19,11 +23,33 @@ public class Main implements Runnable{
 
     Thread hilo3;
     
-    Chat chats = new Chat();
-    Scanner leer = new Scanner(System.in);
-    String ip="";
+    private JButton iniciar;
+
     
-    public void main(String args[]){
+    public Main(){
+        initComponents();
+        configurarventana();
+    }
+    
+    private void configurarventana(){
+        setSize(500, 300);
+    }
+    
+    private void initComponents(){
+        iniciar =new JButton ("Iniciar");
+        
+        iniciar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    correr();
+               }
+        });
+        
+        setLayout (new FlowLayout ());
+        add(iniciar);
+    }
+
+    public void correr(){
         hilo1 = new Thread(this);
         hilo2 = new Thread(this);
         hilo3 = new Thread(this);
@@ -32,9 +58,12 @@ public class Main implements Runnable{
         hilo2.start();
         hilo3.start();
     }
-
+    
     @Override
     public void run() {
+        Chat chats = new Chat();
+        Scanner leer = new Scanner(System.in);
+        String ip="";
         Thread ct = Thread.currentThread();
         String mensaje="";
 
