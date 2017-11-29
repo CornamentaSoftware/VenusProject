@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.net.*;
+import util.Socket;
 /**
  *
  * @author Alumno
@@ -20,30 +21,32 @@ import java.net.*;
 public class CAcceso extends HttpServlet{
 
 
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
         String usu = request.getParameter("user");
         InetAddress address = InetAddress.getLocalHost();
         String ip = address.getHostAddress();
-        
+        String mensaje = ip + " " + request.getParameter("Servicio") + " " + usu;
+        //request.getParameter("Servicio") trae el nombre del servicio al que quiere acceder el usuario
         // Aquí se obtienen los datos del usuario que se enviarán al servidor de autenticacion
         try{
-        mensaje();
+        mensaje(mensaje);
         }
-        catch (Exception e){}
-        
-        
+        catch (Exception e){
+        }   
     }
     
-    private void mensaje() throws Exception{
-        InetAddress ipAS= InetAddress.getByName("");
+    private void mensaje(String mensaje) throws Exception{
+        InetAddress ipAS= InetAddress.getByName("192.168.9.255");
         //Dentro de las comillas va la IP del servidor de autenticacion que debe tener una máquina definida,
         //pero por ahora no tiene :p
         int puertoAS= 5000;
         int miPuerto= 4000;
-        
+        Socket socket = new Socket(miPuerto);
+        socket.envia(ipAS, puertoAS, mensaje);
+        //Envía un mensaje al servidor de autenticacion (AS) con la ip,
+        //el servicio al que quiere acceder y su username, todo separado con espacios
     }
 
 }
