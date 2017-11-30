@@ -5,8 +5,7 @@
  */
 package servlets;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -64,21 +63,11 @@ public class CAcceso extends HttpServlet{
     }
     
     private void mensaje(String mensaje, String address, int puerto) throws Exception{
-        InetAddress ip= InetAddress.getByName(address);
-        int miPuerto= 4000;
-        Socket socket = new Socket(miPuerto);
-        socket.envia(ip, puerto, mensaje);
-        //Envía un mensaje al servidor de autenticacion (AS) con la ip,
-        //el servicio al que quiere acceder y su username, todo separado con espacios
-        socket.close();
+        
     }
     
     private String respuesta() throws Exception{
         String respuesta="";
-        int miPuerto= 4000;
-        Socket socket = new Socket(miPuerto);
-        respuesta=socket.recibe();
-        socket.close();
         return respuesta;
     }
 
