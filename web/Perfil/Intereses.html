@@ -9,6 +9,8 @@ and open the template in the editor.
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <link rel="stylesheet" href="../css/menuA.css" type="text/css"/>
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Perfil/General.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/nuevoChat.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../css/menu.css" type="text/css">
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/desplegar.js" type="text/javascript"></script>
@@ -16,7 +18,6 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
         <link href="../css/Perfil/Inicio.css" rel="stylesheet" type="text/css"/>
-        <script src="../JS/subirArchivo.js" type="text/javascript"></script>
         <title>Venus</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,40 +123,36 @@ and open the template in the editor.
         </div>
         </div>
         <div class="Inicio">
-            <div class="PublicacionesGeneral">
-                <p class="Raleway">Publicaciones</p>
-                <textarea> </textarea><br>
-                <button type="button" class="fa fa-picture-o imagen btn btnSR" id="foto">
-                    <p class="nada" id="texto"></p>
-                    <input type="file" accept=".jpg, .jpeg, .png" id="imagen" onchange="cambiaPerfil();" class="inputfile" required=""/>
-                </button>
-                <button type="button" class="btn btnR btnDerecha">Publicar</button>
-                <div class="Publicaciones">
-                    <div class="publicacion">
-                        <img src="../Img/Perfil/marbella.jpg" alt=""/>
-                        <p class="nombre Raleway">Marbella Velázquez</p>
-                        <p class="user Raleway">@MarbellaVO</p>
-                        <p class="contenido">El reggaeton es divertido y padrísimo de bailar. Nadie pone a Nick Cave en las fiestas. Paren con su hate.</p>
-                        <div class="fechaHora">
-                        <p class="fecha Raleway">25/11/2017</p>
-                        <p class="hora Raleway">06:55 p.m.</p>
-                        </div>
-                    </div>
-                    <div class="publicacion">
-                        <img src="../Img/Perfil/marbella.jpg" alt=""/>
-                        <p class="nombre Raleway">Marbella Velázquez</p>
-                        <p class="user Raleway">@MarbellaVO</p>
-                        <p class="contenido">Qué chulada.</p>
-                        <div class="imagenCuadro">
-                            <div class="vertical">
-                                <img src="../Img/Perfil/perrito.jpg" class="publicacionImg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="fechaHora">
-                        <p class="fecha Raleway">24/11/2017</p>
-                        <p class="hora Raleway">10:31 p.m.</p>
-                        </div>
-                    </div>
+            <div class="Usuarios">
+                <p class="LobsterTwo size50">Intereses</p>
+                <button class="btnFont desNOweidht right guardar" id="guardar" onclick="location.href='ChatsPrivados.html';">Guardar</button>
+                <div class="intereses">
+                    <p class="RalewayP margin0 fontsize25">Intereses de ropa</p><br>
+                    <input type="checkbox" class="plus">Faldas<br><br>
+                    <input type="checkbox" class="plus">Vestidos<br><br>
+                    <input type="checkbox" class="plus">Pantalones<br><br>
+                    <input type="checkbox" class="plus">Leggings<br><br>
+                    <input type="checkbox" class="plus">Playeras<br><br>
+                    <input type="checkbox" class="plus">Blusas<br><br>
+                    <input type="checkbox" class="plus">Sacos<br><br>
+                    <input type="checkbox" class="plus">Chamarras<br><br>
+                    <input type="checkbox" class="plus">Sueteres<br><br>
+                    <input type="checkbox" class="plus">Sudaderas<br><br>
+                </div>
+                <div class="intereses">
+                    <p class="RalewayP margin0 fontsize25">Intereses de accesorios</p><br>
+                    <input type="checkbox" class="plus">Collares<br><br>
+                    <input type="checkbox" class="plus">Aretes<br><br>
+                    <input type="checkbox" class="plus">Pulseras<br><br>
+                    <input type="checkbox" class="plus">Anillos<br><br>
+                </div>
+                <div class="intereses">
+                    <p class="RalewayP margin0 fontsize25">Intereses de tutoriales</p><br>
+                    <input type="checkbox" class="plus">Maquillaje<br><br>
+                    <input type="checkbox" class="plus">Cocina<br><br>
+                    <input type="checkbox" class="plus">Repostería<br><br>
+                    <input type="checkbox" class="plus">Diseño de uñas<br><br>
+                    <input type="checkbox" class="plus">DIY<br><br>
                 </div>
             </div>
         </div>
