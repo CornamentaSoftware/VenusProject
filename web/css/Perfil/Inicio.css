@@ -1,0 +1,121 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.Inicio{
+    width: 50%;
+    margin-left: 25%;
+    float:left;
+    height: 80%;
+    position: absolute;
+}
+.PublicacionesGeneral{
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+    height: 90%;
+}
+.Publicaciones{
+    width: 91%;
+    height: 75%;
+    position: relative;
+    margin-top: 1%;
+}
+.publicacion{
+    position: relative;
+    border: none;
+    float: left;
+    border-top: 1.5px solid #bfbdbd;
+    height: auto;
+    padding: 10px;
+}
+.publicacion Img{
+    border-radius: 50%;
+    max-width: 15%;
+    float: left;
+    margin-right: 1%;
+}
+.nombre{
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0px;
+    float: left;
+}
+.user{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.fecha{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+}
+.fechaHora{
+    width: 100%;
+    margin: 0px;
+    margin-left:15%;
+    float: left;
+}
+.hora{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.contenido{
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width:84%;
+    float:left;
+}
+.imagen{
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.nada{
+    margin: 0px;
+    padding: 0px;
+    float:left;
+    margin-left:5px;
+    font-size:16px;
+    font-family: 'Raleway', sans-serif;
+}
+.inputfile {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    padding-bottom: 0%;
+    margin-left: -25px;
+    margin-top: -35px;
+    float: left;
+    position: absolute;
+}
+.imagenCuadro {
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  float: left;
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+}
+.vertical{
+    display: table-cell;
+    vertical-align: middle;
+}
+.imagenCuadro img {
+  display: block;
+  max-width: 150px;
+  margin: auto;
+  border-radius: 5px;
+  transition: all 0.5s ease-in;
+}

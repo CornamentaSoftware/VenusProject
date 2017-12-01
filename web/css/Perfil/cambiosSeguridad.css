@@ -1,0 +1,113 @@
+.Datos{
+    width: 25%;
+    margin-left: 75%;
+    float: left;
+    height: 80%;
+    position: absolute;
+    margin-top: 5%;
+    border-left: 1.5px solid #bfbdbd;
+    padding-left: 1%;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.btnFont{
+    margin-top:5%;
+    background: #F78582;
+    margin-left: 20%;
+}
+.Datos img{
+    margin-top:5%;
+    max-width: 60%;
+    margin-left: 19%;
+    border-radius: 50%; 
+}
+.nombreS{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 0px;
+    margin-left:5%;
+}
+.userS{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    color: gray;
+    margin-left: 10%;
+}
+.DivRosa{
+    width: 60%;
+    background: #FE9E8E;
+    box-shadow: 3px 3px 20px #FE9E8E;
+    padding: 20px 15px 20px 15px;
+    border-radius: 5px;
+    margin: auto;
+    height: auto;
+    margin-top: 30px;
+}
+button{
+    font-family: 'Raleway', sans-serif;
+    border: 1.5px solid rgba(255, 255, 255, 0.52);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+    background-color: rgba(158, 47, 86, 0);
+    color: rgba(255, 255, 255, 0.52);
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+button:hover {
+    background-color: #FFA08E;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.R{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.52);
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    border-top: 0;
+    height:auto;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(158, 47, 86, 0);
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.inputfile {
+    height: auto;
+    opacity: 0;
+    padding: 1%;
+    margin-left: -60%;
+    margin-top: -2%;
+    float: left;
+    width: 60%;
+    position: absolute;
+}
+.subir{
+    margin-right: 10%;
+    z-index: 1;
+    float: left;
+    margin-left: 10%;
+}
+.iborrainputfile {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+    width: 100%;
+        margin-bottom: 25px;
+    font-size:18px;
+    font-family: 'Raleway', sans-serif;
+    padding: 2px;
+    float: left;
+    z-index: 0;
+    text-align: center;
+}
+.iborrainputfile:hover{
+    background: #FFA08E;
+}
+.nada{
+    margin: 0px;
+    float:left;
+    width: 50%;
+}

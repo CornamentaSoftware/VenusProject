@@ -1,0 +1,109 @@
+.color{
+    color: black;
+}
+
+input[type="checkbox"].delete:checked:before{
+    opacity: 1;
+}
+input[type="checkbox"].delete:checked{
+    background:#fe7678;
+}
+.delete:before{
+    opacity: 0;
+    font-family: FontAwesome;
+    font-size: 18px;
+    content:"\f1f8";
+    position: absolute;
+    top: 6px;
+    color: white;
+    font-weight: 100;
+    left: 8px;
+    transition: all 200ms ease;
+}
+body{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+.delete {
+    padding: 8px 8px 8px 10px;
+    float: right;
+    position: relative;
+}
+.prueba{
+    float: right;
+    margin: 0px;
+    position: relative;
+    margin-top: -35px;
+    padding: 15px 0px 15px 15px;
+}
+.buscar{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+    margin-bottom: 55px;
+}
+.size50{
+    font-size: 50px;
+}
+.RalewayP{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+.fontsize25{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.margin0{
+    margin: 0px;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: "Raleway";
+    font-size: 15px;
+    box-shadow: inset 0 0 0 3px #fe7678;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+    float: left;
+    position: relative;
+}
+.intereses{
+        padding: 10px;
+        float: left;
+        margin-left: 15px;
+        border-right: 1.5px solid #bfbdbd;
+        height:120%;
+}
+.Usuarios{
+    width: 120%;
+}
+input[type="checkbox"].plus:checked:before{
+    opacity: 1;
+}
+input[type="checkbox"].plus:checked{
+    background:#fe7678;
+}
+.plus:before{
+    opacity: 0;
+    font-family: FontAwesome;
+    font-size: 16px;
+    content:"\f00c";
+    position: absolute;
+    top: 5px;
+    color: white;
+    font-weight: 100;
+    left: 4.5px;
+    transition: all 200ms ease;
+}
+.plus {
+    padding: 8px 8px 8px 10px;
+    float: right;
+    position: relative;
+}
+.guardar{
+    top: -50px;
+    left: -90px;
+}
