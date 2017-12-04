@@ -33,9 +33,9 @@ public class CAcceso extends HttpServlet{
         try{
             //Cambiar las address dependiendo de la máquina donde esté cada servidor
         //Mensaje al servidor de autenticación
-        mensaje(mensaje, "192.168.9.255",5000);
+        mensaje(mensaje, "192.168.1.72",5000);
         //Mensaje al servidor de tickets
-        mensaje(mensaje2, "192.168.9.255",3000);
+        mensaje(mensaje2, "192.168.1.72",3000);
         respuesta = respuesta();
         }
         catch (Exception e){

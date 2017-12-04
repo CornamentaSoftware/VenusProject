@@ -197,7 +197,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="Perfil.jsp">
+                        <a href="../Perfil/Perfil-Seguridad.html">
                             <i class="fa fa-user"></i>
                             <strong>Perfil</strong>
                             <small>Tu privacidad</small>

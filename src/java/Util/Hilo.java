@@ -1,34 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Util;
+
+import java.io.*;
+import java.net.*;
 
 /**
  *
- * @author Alumno
+ * @author Ana San
  */
 public class Hilo implements Runnable{
+    
+    Socket socket;
+    OutputStream flujoS;
+    PrintWriter writer;
+    String mensaje;
+    InputStream flujoE;
+    BufferedReader reader;
 
-    private String cuenta;
-    private boolean running = true;
-
-    public Hilo(String cuenta){
-        this.cuenta = cuenta;
+    public Hilo(String mensaje, String servidor, int puerto) throws IOException{
+            socket = new Socket(servidor, puerto);
+            flujoS = socket.getOutputStream();
+            writer = new PrintWriter(new OutputStreamWriter(flujoS));
+            this.mensaje = mensaje;
+            flujoE = socket.getInputStream();
+            reader = new BufferedReader(new InputStreamReader(flujoE));
     }
 
     public void run(){
         try{
-            while(running){
-                System.out.println(cuenta);
-            }
+            writer.println(mensaje);
+            writer.flush();
         }
         catch(Exception e){}
     }
 
-    public void parar(){
-        running = false;
+    public String parar() throws IOException{
+        String respuesta = "";
+        respuesta = reader.readLine();
+        socket.close();
+        return respuesta;
     }
 
 }
