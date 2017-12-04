@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import Util.Hilo;
 import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,57 +18,59 @@ import java.net.*;
  * @author Alumno
  */
 public class CAcceso extends HttpServlet{
-
-
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse resp)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-        String usu = request.getParameter("user");
+        String usu = sesion.getAttribute("usuario").toString();
         InetAddress address = InetAddress.getLocalHost();
         String ip = address.getHostAddress();
-        String mensaje = ip + " " + request.getParameter("Servicio") + " " + usu;
+        String mensaje = ip + "&" + request.getParameter("Servicio") + "&" + usu + "&";
         //request.getParameter("Servicio") trae el nombre del servicio al que quiere acceder el usuario
         // Aquí se obtienen los datos del usuario que se enviarán al servidor de autenticacion
-        String mensaje2 = ip + " " + request.getParameter("Servicio");
-        String respuesta = "";
+        String mensaje2 = ip + "&" + request.getParameter("Servicio");
+        String respuesta = "", respuesta2="";
         try{
             //Cambiar las address dependiendo de la máquina donde esté cada servidor
         //Mensaje al servidor de autenticación
-        mensaje(mensaje, "192.168.1.72",5000);
+        respuesta = mensaje(mensaje, "192.168.1.72",5000);
+ 
         //Mensaje al servidor de tickets
-        mensaje(mensaje2, "192.168.1.72",3000);
-        respuesta = respuesta();
+        respuesta2 = mensaje(mensaje2, "192.168.1.72",3000);
         }
         catch (Exception e){
         }   
         
         if(respuesta.equals("Error")){
+            resp.sendRedirect("http://localhost:8080/VenusProject/Plantillas/Error.html");
             //Enivarle un alert que diga "Ha ocurrido un error, por favor vuelve a iniciar sesion"
             //Direccionarlo al inicio de sesion y cerrar la sesion
         }
         else{
-            String servicio = "";
-            for(int i=0; i<respuesta.length(); i++){
-                if(respuesta.charAt(i)==' '){
-                    servicio = respuesta.substring(i+1);
+            if(respuesta2.equals("Error")){
+                resp.sendRedirect("http://localhost:8080/VenusProject/Plantillas/Error.html");
+                //Enivarle un alert que diga "Ha ocurrido un error, por favor vuelve a iniciar sesion"
+                //Direccionarlo al inicio de sesion y cerrar la sesion
+            }
+            else{
+                switch(respuesta2){
+                    case "CambiarD": resp.sendRedirect("http://localhost:8080/VenusProject/Plantillas/CambiarD.html");
+                    //Envía al módulo de cambiar datos
+                        break;
+                    default:
+                        break;
                 }
             }
-            switch(servicio){
-                case "CambiarD": resp.sendRedirect("http://localhost:8080/VenusProject/Plantillas/CambiarD.html");
-                //Envía al módulo de cambiar datos
-                    break;
-            }
         }
-        
     }
     
-    private void mensaje(String mensaje, String address, int puerto) throws Exception{
-        
-    }
-    
-    private String respuesta() throws Exception{
-        String respuesta="";
-        return respuesta;
+    private String mensaje(String mensaje, String address, int puerto) throws Exception{
+        Hilo hilo = new Hilo(mensaje,address,puerto);
+        Thread h = new Thread(hilo);
+        h.start();
+        String msj="";
+        msj = hilo.parar();
+        return msj;
     }
 
 }
