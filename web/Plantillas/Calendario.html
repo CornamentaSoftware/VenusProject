@@ -6,6 +6,7 @@
         <link href="../font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <link href="../css/menu.css" rel="stylesheet" type="text/css"/>
         <link href="../css/menuA.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/nuevoChat.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
@@ -14,6 +15,10 @@
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="../css/jquery-ui.min.css">
         <link rel="stylesheet" href="../css/images/">
+        <link rel="stylesheet" href="../css/Perfil/General.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/Perfil/General.css" type="text/css">
+
+
         <script src="../js/jquery.js"></script>
         <script src="../js/jquery-ui.min.js"></script>
         <script src="../js/datepicker-es.js"></script>
@@ -31,22 +36,34 @@
                     $('#textofecha').datepicker('show');
                 });
             });
-            function add(delta) {
-
+            function adda(delta) {
                 valor = eval(formulario1.casilla1.value);
-
-                formulario1.casilla1.value = eval(valor + delta);
-
+                if (valor < 10) {
+                    formulario1.casilla1.value = eval(valor + delta);
+                }
             }
-            function add2(delta) {
-
+            function addb(delta) {
+                valor = eval(formulario1.casilla1.value);
+                if (valor > 1) {
+                    formulario1.casilla1.value = eval(valor + delta);
+                }
+            }
+            function add2a(delta) {
                 valor = eval(formulario2.casilla2.value);
-
-                formulario2.casilla2.value = eval(valor + delta);
-
+                if (valor < 40) {
+                    formulario2.casilla2.value = eval(valor + delta);
+                }
+            }
+            function add2b(delta) {
+                valor = eval(formulario2.casilla2.value);
+                if (valor > 1) {
+                    formulario2.casilla2.value = eval(valor + delta);
+                }
             }
             function calen() {
+                document.getElementById("windowcal").style.display = "block";
                 document.all("windowcal").src = "calendariodos.html";
+                document.getElementById("windowciclo").style.display = "block";
             }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,68 +160,103 @@
             </nav>
         </div>
         <div class="Calendario">
-            <div>
-                <p class="DancingScript">Calendario Menstrual</p>
-                <div id="divBotones">
-                    <table>
-                        <tr>
-                            <th id="th1">
-                                <p class="Montserrat">
-                                    ¿Cuándo inició tu último periodo? 
+            <p class="DancingScript">Calendario Menstrual</p>
+            <div id="divBotones">
+                <p class="tit">¡CONOCE TU CICLO!</p>
+                <p class="textco">Introduce los datos para que puedas crear tu calendario menstrual y tu ciclo:</p>
+                <br>
+                <table>
+                    <tr>
+                        <th id="th1">
+                            <p class="Montserrat">
+                                ¿Cuándo inició tu último periodo? 
 
-                                </p>
-                            </th>
-                            <th id="th2">
-                                <p class="Montserrat">
-                                    ¿Cuántos días duró?
+                            </p>
+                        </th>
+                        <th id="th2">
+                            <p class="Montserrat">
+                                ¿Cuántos días duró?
 
-                                </p>
-                            </th>
-                            <th id="th3">
-                                <p class="Montserrat">
-                                    ¿Cuántos días dura tu ciclo?
-                                </p>
-                            </th>
-                            <th>
-                                <p class="Montserrat">
-                                    Calcular
-                                </p>
-                            </th>
+                            </p>
+                        </th>
+                        <th id="th3">
+                            <p class="Montserrat">
+                                ¿Cuántos días dura tu ciclo?
+                            </p>
+                        </th>
+                        <th>
+                            <p class="Montserrat">
+                                Calcular
+                            </p>
+                        </th>
 
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="textofecha"/>
-                                <button id="date-button" class="btncalen btnRCalen btnpos fa fa-calendar-check-o"></button>
-                            </td>
-                            <td>
-                                <form name="formulario1">
-                                    <span class="btnplusmin btnR2td btnpos fa fa-minus" onClick="add(-1);"> </span>
-                                    <input type="text" class="spannums btnR2td btnpos" name="casilla1" value="1"/>
-                                    <span class="btnplusmin btnR2td btnpos fa fa-plus" onClick="add(1);"></span>
-                                </form>
-                            </td>
-                            <td>
-                                <form name="formulario2">
-                                    <span class="btnplusmin2 btnR3td btnpos fa fa-minus" onclick="add2(-1);"></span> 
-                                    <input type="text" class="spannums2 btnR3td btnpos" name="casilla2" value="1">
-                                    <span class="btnplusmin2 btnR3td btnpos fa fa-plus" onclick="add2(1);"></span>
-                                </form>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="textofecha"/>
+                            <button id="date-button" class="btncalen btnRCalen btnpos fa fa-calendar-check-o"></button>
+                        </td>
+                        <td>
+                            <form name="formulario1">
+                                <span class="btnplusmin1 btnR2td btnpos fa fa-minus" onClick="addb(-1);"> </span>
+                                <input type="text" class="spannums btnR2td btnpos" name="casilla1" value="1" readonly />
+                                <span class="btnplusmin1 btnR2td btnpos fa fa-plus" onClick="adda(1);"></span>
+                            </form>
+                        </td>
+                        <td>
+                            <form name="formulario2">
+                                <span class="btnplusmin2 btnR3td btnpos fa fa-minus" onclick="add2b(-1);"></span> 
+                                <input type="text" class="spannums2 btnR3td btnpos" name="casilla2" value="1" readonly> 
+                                <span class="btnplusmin2 btnR3td btnpos fa fa-plus" onclick="add2a(1);"></span>
+                            </form>
 
-                            </td>
-                            <td>
-                                <span class="btn2 btnR2 btnpos fa fa-calculator" onclick="calen();"></span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="frame">
-                <iframe width="300" height="400" src="../css/images/calendario.png" name="cal" id="windowcal"></iframe>
-            </div>
-            <div class="frame">
-                <iframe width="300" height="400" src="../css/images/ciclo.png" name="cal" id="windowciclo"></iframe>
+                        </td>
+                        <td>
+                            <span class="btn2 btnR2 btnpos fa fa-calculator" onclick="calen();"></span>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
+        <div class="barraC">
+            <div class="consejos">
+                <p class="tit">Mantente activa</p>
+                <p class="textco">Cuando haces deporte tu cuerpo libera endorfinas, por lo que ayudan a aliviar el dolor de la menstruación de forma natural.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Infusiones calientes</p>
+                <p class="textco">Te ayudará a relajarte y disminuirá el dolor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Dulce para el malhumor</p>
+                <p class="textco">Si sueles ponerte molesta o de malhumor en esos días, come algo dulce, y te pondrás mejor.</p>
+            </div>
+        </div>
+        <div class="divtext">
+            <iframe width="300" height="400" name="cal" id="windowcal" hidden="hidden"></iframe>
+            <iframe width="300" height="400" src="../css/images/ciclo.png" name="cal" id="windowciclo" hidden="hidden"></iframe>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="tit2">¿POR QUÉ DEBEMOS LLEVAR UN CONTROL DE NUESTRO CICLO MENSTRUAL?</p>
+                <br>
+                <p class="textco">
+                    El uso de un calendario menstrual es muy importante, ya que
+                    es ideal para registrar, conocer, planear y prepararse 
+                    ante eventos como la menstruación. <br><br>
+                    Te permite tener una idea general y exacta de tus ciclos. 
+                    Así, cuando toque un nuevo ciclo no te tomará por sorpresa 
+                    o desprevenida, te permitirá identificar irregularidades o 
+                    alteraciones, te ayudará a reconocer tus días fértiles y a
+                    prepararte para el momento en que decidas usar un método 
+                    anticonceptivo. 
+                    Cuando acudas con tu médico o ginecólogo no olvides consultarlo, 
+                    ya que así tendrá un instrumento más para el mejor seguimiento 
+                    de tu estado de salud y podrá recomendarte con mayor precisión 
+                    un tratamiento específico, en caso de que lo necesites.
+                </p>
+        </div>
+
     </body>
 </html>
