@@ -1,6 +1,6 @@
 .Calendario{
     width: 70%;
-    height: 30%;
+    height: 40%;
     float: left
 }
 #textofecha{
@@ -214,6 +214,13 @@ tr:nth-child(even) {background-color: #f2f2f2}
     border-left: 1.5px solid #bfbdbd;
     padding-left: 1%;
 }
+#titlecons{
+    border: none;
+    padding: 10px;
+    height: 16%;
+    width: 90%;
+    background: none;
+}
 .consejos{
     border: none;
     border-top: 1.5px solid #bfbdbd;
@@ -245,6 +252,22 @@ tr:nth-child(even) {background-color: #f2f2f2}
     font-weight: bold;
     text-align: center;
     color:  #FAA27A;
+}
+.tit3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color:  #FA7AB3;
+}
+div.frame{
+    width: 50%;
+    padding: 5px;
+    margin: auto;
+    float: left;
 }
 .textco{
     font-size: 14px;
