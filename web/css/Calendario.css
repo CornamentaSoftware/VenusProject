@@ -63,12 +63,21 @@
     cursor: pointer;
 }
 
-iframe{
+.liframe{
     width: 100%;
-    border-color: black;
-    border-width: 10px;
+    border-color: transparent;
     padding: 5px;
-    margin: auto;
+    margin-left: 10%;
+    margin-right: 70%;
+}
+.border{
+    width: 100%;
+    border-color: transparent;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 70%;
+    border-width: 1px;
+    border-radius: 300px;
 }
 #divBotones{
     float: left;
@@ -182,6 +191,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
     transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
 }
 .btn2{
+    font-family: 'Raleway', sans-serif;
     border-radius: 300px;
     font-size: 11px;
     margin: 5px auto;
@@ -226,7 +236,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
     border-left: 1.5px solid #bfbdbd;
     padding-left: 1%;
     overflow-y: scroll;
-        border-bottom:  1.5px solid #bfbdbd;
+    border-bottom:  1.5px solid #bfbdbd;
 
 }
 #titlecons{
@@ -289,4 +299,145 @@ div.frame{
     margin: 0px;
     font-family: 'Raleway', sans-serif;
     text-align: justify;
+}
+.textc2{
+    font-size: 14px;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+.barraacand{
+    width: 11%;
+    margin-left: 19%;
+    margin-right: 70%;
+    float: right;
+    height: 53%;
+    position: absolute;
+    margin-top: 24%;
+    padding-right: 1%;
+}
+.askbarra{
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    color: black;
+    border: none;
+}
+.litbtn{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .6em .4em;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.litbtn2{
+    border-radius: 300px;
+    font-size: 13px;
+    margin: 5px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: .4em .4em;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    line-height: 1em;
+    color: #fff;
+    border: none;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.color1{
+    background-color: #F768AD;
+}
+.color1R:hover {
+    background: rgba(0,0,0,0);
+    color: #F768AD;
+    box-shadow: inset 0 0 0 3px #F768AD;
+}
+.color2{
+    background-color: #545353;
+}
+.color2R:hover {
+    background: rgba(0,0,0,0);
+    color: #545353;
+    box-shadow: inset 0 0 0 3px #545353;
+}
+.color3{
+    background-color: #4CB4F4;
+}
+.color3R:hover {
+    background: rgba(0,0,0,0);
+    color: #4CB4F4;
+    box-shadow: inset 0 0 0 3px #4CB4F4;
+}
+.color4{
+    background-color: #F4571E;
+}
+.color4R:hover {
+    background: rgba(0,0,0,0);
+    color: #F4571E;
+    box-shadow: inset 0 0 0 3px #F4571E;
+}
+.color5{
+    background-color: #F44C4F;
+}
+.color5R:hover {
+    background: #C80D0D;
+    color: #C80D0D;
+    box-shadow: inset 0 0 0 3px #C80D0D;
+}
+.color6{
+    background-color: #F99E9E;
+}
+.color6R:hover {
+    background: rgba(0,0,0,0);
+    color: #F99E9E;
+    box-shadow: inset 0 0 0 3px #F99E9E;
+}
+.color7{
+    background-color: #F5D256;
+}
+.color7R:hover {
+    background: rgba(0,0,0,0);
+    color: #F5D256;
+    box-shadow: inset 0 0 0 3px #F5D256;
+}
+.color8{
+    background-color: #6C0305;
+}
+.color8R:hover {
+    background: rgba(0,0,0,0);
+    color: #6C0305;
+    box-shadow: inset 0 0 0 3px #6C0305;
+}
+.color9{
+    background-color: #036C57;
+}
+.color9R:hover {
+    background: rgba(0,0,0,0);
+    color: #036C57;
+    box-shadow: inset 0 0 0 3px #036C57;
+}
+.color10{
+    background-color: #F17DCC;
+}
+.color10R:hover {
+    background: rgba(0,0,0,0);
+    color: #F17DCC;
+    box-shadow: inset 0 0 0 3px #F17DCC;
 }
