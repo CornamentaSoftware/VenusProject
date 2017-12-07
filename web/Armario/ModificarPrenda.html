@@ -13,13 +13,38 @@ and open the template in the editor.
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/desplegar.js" type="text/javascript"></script>
         <link href="../css/Armario/Armario.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Armario/nuevos.css" rel="stylesheet" type="text/css"/>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Armario/nuevos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
-
         <title>Venus</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var bool1 = true;
+            var bool2 = true;
+            function estrella() {
+                if(bool1){
+                    document.getElementById("estrella").className = "fa fa-star estrella";
+                    document.getElementById("estrella").style.color = "#F6DA1E";
+                    bool1=false;
+                }else{
+                    document.getElementById("estrella").className = "fa fa-star-o estrella";
+                    document.getElementById("estrella").style.color = "#F6DA1E";
+                    bool1=true;
+                }
+            }
+            function intercambio() {
+                if(bool2){
+                    document.getElementById("intercambio").style.color = "#E34B48";
+                    bool2=false;
+                }else{
+                    document.getElementById("intercambio").style.color = "#F0DCD8";
+                    bool2=true;
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="MenuA">
@@ -123,9 +148,13 @@ and open the template in the editor.
         </div>
         <div class="cuerpoNuevo">
             <center>
-            <p class="Pacifico fontsize60">Modificar datos prenda</p>
+                <p class="Pacifico fontsize60">Modificar datos prenda</p>
             </center>
             <div class="DivRosa">
+                <div class="size">
+                    <span onclick="estrella();" class="fa fa-star-o estrella" id="estrella" aria-hidden="true"></span>
+                    <span onclick="intercambio();" class="fa fa-exchange intercambio" id="intercambio" aria-hidden="true"></span>
+                </div>
                 <center>
                     <img src="../Img/Perfil/P1.jpg" alt=""/>
                 </center>
