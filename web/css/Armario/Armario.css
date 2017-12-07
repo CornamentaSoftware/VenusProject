@@ -1,0 +1,173 @@
+.cuerpoNuevo{
+    height: 91%;
+    width: 55%;
+    float: left;
+    position: absolute;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+.imagenes .nadaA img{
+    width: 100%;
+}
+.nadaA{
+    margin: 0px;
+    border: none;
+    width: 25%;
+    float: left;
+    outline: none;
+    padding: 0px;
+    background: none;
+}
+.nadaA:hover{
+    background: none;
+}
+select{
+    width: 100%;
+    height:auto;
+    margin: 15px 10px;
+    font-size:1.1em;
+    font-family: 'Raleway', sans-serif;
+    background: #FE9E8E;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.iborrainputfile{
+    margin: 20px 10px;;
+}
+.no{
+    margin-top:0px;
+}
+.si{
+    margin-top:5%;
+}
+.Etiqueta{
+    font-weight: bolder;
+    width: 100%;
+    float: left;
+    color: #941331;
+    letter-spacing: 1px;
+    font-size:1.8em;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 2%;   
+}
+.imagenes{
+    margin: 5% 0px;
+    width: 100%;
+}
+.imagenes img{
+    width: 25%;
+    margin: 0px 4%;
+    float:left;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #999;
+}
+.btnFont{
+    margin-top: -60px;
+    background: #F78582;
+}
+.ContenidoA{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+.bolder{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size:3.5em;
+    color:#90130E;
+    margin: 0px;
+    margin-top: 5%;
+    margin-left: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+.bolderr{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size:3.5em;
+    color:#90130E;
+    margin: 0px;
+    margin-top: 5%;
+    font-family: 'Raleway', sans-serif;
+}
+.DivRosa{
+    width: 60%;
+    background: #FE9E8E;
+    box-shadow: 3px 3px 20px #FE9E8E;
+    padding: 20px 15px 20px 15px;
+    border-radius: 5px;
+    margin: auto;
+    height: auto;
+    color: #493b39;
+    font-size: 18px;
+    margin-top: 30px;
+}
+button{
+    font-family: 'Raleway', sans-serif;
+    border: 1.5px solid rgba(255, 255, 255, 0.52);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+    background-color: rgba(158, 47, 86, 0);
+    color: rgba(255, 255, 255, 0.52);
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+button:hover {
+    background-color: #FFA08E;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.R{
+    width: 100%;
+    color: black;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    border-top: 0;
+    height:auto;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(158, 47, 86, 0);
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.DivRosa img{
+    width: 25%;
+    border-radius: 50%;
+}
+.inputfile {
+    height: auto;
+    opacity: 0;
+    padding: 1%;
+    margin-left: -60%;
+    margin-top: -2%;
+    float: left;
+    width: 60%;
+    position: absolute;
+}
+.subir{
+    margin-right: 10%;
+    z-index: 1;
+    float: left;
+    margin-left: 10%;
+}
+.iborrainputfile {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+    width: 100%;
+        margin-bottom: 25px;
+    font-size:18px;
+    font-family: 'Raleway', sans-serif;
+    padding: 2px;
+    float: left;
+    z-index: 0;
+    text-align: center;
+}
+.iborrainputfile:hover{
+    background: #FFA08E;
+}
+.nada{
+    margin: 0px;
+    float:left;
+    width: 50%;
+}
+
