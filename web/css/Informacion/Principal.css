@@ -1,0 +1,339 @@
+body {
+    font-weight: 400;
+    height: 650px;
+    margin: 0;
+    font-size: 1em;
+    padding: 35px 10px;
+    border-right: 25px solid #fff;
+    border-left: 25px solid #fff;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+.orga{
+    width: 60%;
+    margin-left: 20%;
+}
+.ipn{
+    position: absolute;
+    width:150px;
+    margin-left: 0px;
+}
+.cecyt9{
+    position: absolute;
+    margin-left: 85%;
+    width:150px;
+}
+.Equipo{
+    height: 950px;
+    background: #E89B8C;
+    color: #fff;
+}
+.top:before {
+    content:"\f060";
+}
+.top:before {
+    margin: 0 4px;
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-family: FontAwesome;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    outline: none;
+}
+.Equipo a {
+    color: white;
+}
+a:hover, a:focus {
+    outline: none;
+}
+.Equipo a:hover, .Equipo a:focus {
+    color: #125480;
+}
+.top{
+    width: 99%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.69em;
+    margin: 0;
+    line-height: 2.2;
+    padding: 5px 10px;
+}
+h1{
+    margin: 0;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3.5em;
+    line-height: 1.3;
+}
+h2{
+    margin: 0;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+    font-size: 2.5em;
+    line-height: 1.3;
+}
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    z-index: 1001;
+}
+body::after {
+    top: auto;
+    bottom: 0;
+}
+.imagenes{
+    margin-top: 5%;
+}
+.Info{
+    width: 100%;
+    float: left;
+}
+.Todo{
+    width: 100%;
+    height: auto;
+}
+.nombres{
+    width: 14%;
+    text-align: center;
+    float: left;
+    margin-top: 1%;
+    margin-right: 5%;
+    font-size: 1.3em;
+    margin-left: 5%;
+}
+.imagenes img{
+    width: 14%;
+    float: left;
+    border-radius: 50%; 
+    border: 3px solid rgba(255, 255, 255, 0.56);
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.Organigrama{
+    width: 100%;
+    float: left;
+    margin-top: 2%;
+}
+.img{
+    width: 60%;
+    margin-left: 20%;
+    float:left;
+}
+p{
+    margin: 0px;
+}
+.Derecha{
+    float: left;
+    height: auto
+}
+.LobsterInf{
+    font-family: 'Lobster Two', cursive;
+    font-size: 50px;
+    font-weight: 100;
+}
+.MenuA{
+    width: 100%;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .Derecha {
+        width: 160px;
+        margin: 0;
+    }
+}
+.i{
+    background-image: url(../Img/fondo.png);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+.ca-menu li{
+    height: 50px;
+    list-style: none;
+    position: relative;
+    float: left;
+    margin-right: 0px;
+    border-radius: 5px;
+    transition: all 300ms linear;
+}
+.chico{
+    width: 100px;
+}
+.grande{
+    width: 160px;
+}
+.ca-menu li a{
+    display: block;
+    position:relative;
+}
+#H{
+    font-family: FontAwesome;
+    color: #FF8D72;
+    font-size: 35px;
+    width: 40%;
+    height: 100%;
+    top: 5px;
+    left: 15px;
+    position: relative;
+    text-align: center;
+    transition: all 400ms linear;
+}
+#M{
+    font-family: FontAwesome;
+    color: #FF8D72;
+    font-size: 35px;
+    width: 40%;
+    height: 100%;
+    top: 5px;
+    left: -5px;
+    position: relative;
+    text-align: center;
+    transition: all 400ms linear;
+}
+.ca-content{
+    position: absolute;
+    left: 25%;
+    width: 70%;
+    height: 100%;
+    top: 0px;
+}
+.ca-main{
+    font-size: 16px;
+    color: #FF8D72;
+    text-align: right;
+    transition: all 200ms linear;
+}
+.ca-menu li:last-child{
+    margin-right: 0px;
+}
+.ca-menu li:hover{
+    background-color:  rgb(229, 229, 229);
+}
+.ca-menu li:hover #H{
+    color: #B75041;
+    font-size: 45px;
+}
+.ca-menu li:hover #M{
+    color: #B75041;
+    font-size: 42px;
+}
+.ca-menu li:hover .ca-main{
+    color: #B75041;
+}
+.ca-menu li:hover{
+    color: #B75041;
+}
+.MenuA{
+    width: 100%;
+    height: 10%;
+    float: left;
+    background-color: rgb(29, 36, 64);
+}
+.Empresa{
+    height: 300px;
+    width: 100%;
+    background-color: rgb(182, 116, 112);
+    position: relative;
+}
+.Derecha{
+    padding-right: 2%;
+    float: right;
+    padding-top: 5px;
+}
+.ca-menu li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 300ms linear;
+}
+.chico{
+    width: 130px;
+}
+.grande{
+    width: 150px;
+}
+.ca-menu li a{
+    display: block;
+    position:relative;
+}
+#H{
+    font-family: FontAwesome;
+    color: #e98b81;
+    font-size: 40px;
+    width: 40%;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    position: relative;
+    text-align: center;
+    transition: all 400ms linear;
+}
+#M{
+    font-family: FontAwesome;
+    color: #e98b81;
+    font-size: 40px;
+    width: 40%;
+    height: 100%;
+    top: 5px;
+    left: -5px;
+    position: relative;
+    text-align: center;
+    transition: all 400ms linear;
+}
+.ca-content{
+    position: absolute;
+    left: 25%;
+    width: 70%;
+    height: 100%;
+    top: 0px;
+}
+.ca-main{
+    font-size: 18px;
+    color: #e98b81;
+    text-align: right;
+    transition: all 200ms linear;
+}
+.Derecha ul{
+    margin: 0px;
+}
+.ca-menu li:last-child{
+    margin-right: 0px;
+}
+.ca-menu li:hover{
+    background-color:  rgb(229, 229, 229);
+}
+.ca-menu li:hover #H{
+    color: #dc9b94;
+    font-size: 48px;
+}
+.ca-menu li:hover #M{
+    color: #dc9b94;
+    font-size: 48px;
+}
+.ca-menu li:hover .ca-main{
+    color: #dc9b94;
+}
+.ca-menu li:hover{
+    color: #dc9b94;
+}
+
+    

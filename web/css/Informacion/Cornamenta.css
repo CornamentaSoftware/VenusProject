@@ -1,0 +1,54 @@
+.Cornamenta{
+    background: #ffa89a;
+    color: #1C2340;
+}
+.ipn{
+    position: absolute;
+    width:150px;
+    margin-left: 0px;
+}
+.cecyt9{
+    position: absolute;
+    margin-left: 85%;
+    width:150px;
+}
+.Datos{
+    width: 100%;
+}
+img{
+    width: 100%;
+    float: left;
+}
+h1{
+    color:#1C2340;
+    letter-spacing: 2px;
+}
+.bolder{
+    font-weight: bolder;
+}
+.imagen{
+    width: 40%;
+    float: left;
+}
+.texto{
+    font-size: 1.1em;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    width: 53%;
+    color:#1C2340;
+    text-align: justify;
+    margin: 0;
+    margin-left: 5%;
+    float: left;
+}
+.Contenido{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+}
+a{
+    color: #1C2340
+}
+.top:before{
+    color: #1C2340
+}

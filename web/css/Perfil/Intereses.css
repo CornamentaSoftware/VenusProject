@@ -1,0 +1,15 @@
+input[type="checkbox"].plus{
+    width: 25px;
+    height: 25px;
+}
+.btnFont{
+    background: #FC8D86;
+    margin-bottom: -40px;
+}
+input[type="checkbox"].plus:checked{
+    background:#FC8D86;
+}
+input[type="checkbox"].plus{
+    float: left;
+    box-shadow: inset 0 0 0 3px #FC8D86;
+}

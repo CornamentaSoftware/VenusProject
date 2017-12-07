@@ -1,7 +1,22 @@
 .color{
     color: black;
 }
-
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.Contenido{
+    width: 100%;
+    height: 65%;
+}
+input[type="checkbox"].plus:checked:before{
+    opacity: 1;
+}
+input[type="checkbox"].plus:checked{
+    background:#fe7678;
+}
 input[type="checkbox"].delete:checked:before{
     opacity: 1;
 }
@@ -63,11 +78,11 @@ input[type="checkbox"]{
     font-family: "Raleway";
     font-size: 15px;
     box-shadow: inset 0 0 0 3px #fe7678;
-    width: 25px;
-    height: 25px;
+    padding: 8px 8px 8px 10px;
+    width: 30px;
+    height: 30px;
     border-radius: 5px;
     margin: 0 5px 0 0;
-    float: left;
     position: relative;
 }
 .intereses{
