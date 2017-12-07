@@ -9,12 +9,16 @@ and open the template in the editor.
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <link rel="stylesheet" href="../css/menuA.css" type="text/css"/>
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/Perfil/General.css" rel="stylesheet" type="text/css"/>
         <link href="../css/Chats/nuevoChat.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../css/menu.css" type="text/css">
         <link href="../css/desplegable.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/desplegar.js" type="text/javascript"></script>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="../css/Perfil/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/Perfil/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../css/Perfil/cs-select.css" />
+        <link rel="stylesheet" type="text/css" href="../css/Perfil/cs-skin-circular.css" />
+        <link href="../css/Perfil/Intereses.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Lobster+Two|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css"/>
         <link href="../css/Perfil/Inicio.css" rel="stylesheet" type="text/css"/>
@@ -125,34 +129,124 @@ and open the template in the editor.
         <div class="Inicio">
             <div class="Usuarios">
                 <p class="LobsterTwo size50">Intereses</p>
+                <div class="container">
+			<section>
+				<select class="cs-select cs-skin-circular">
+					<option value="" disabled selected>Select an activity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			</section>
+		</div><!-- /container -->
+                <script src="../JS/classie.js" type="text/javascript"></script>
+                <script src="../JS/selectFx.js" type="text/javascript"></script>
+		<script>
+                        (function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							var img = document.createElement('img');
+							img.src = '../Img/Perfil/'+val+'.png';
+							img.onload = function() {
+								document.querySelector('span.cs-placeholder').style.backgroundImage = 'url(../Img/Perfil/'+val+'.png)';
+                                                                document.querySelector('span.cs-placeholder').style.backgroundSize = '100px';
+                                                                document.getElementById(val).style.opacity = '1';
+                                                                for(i=(val+1);i<=8;i++){
+                                                                    document.getElementById(i).style.opacity = '0';
+                                                                }
+                                                                for(i=1;i<val;i++){
+                                                                    document.getElementById(i).style.opacity = '0';
+                                                                }
+							};
+						}
+					});
+				} );
+			})();
+                </script>
                 <button class="btnFont desNOweidht right guardar" id="guardar" onclick="location.href='ChatsPrivados.html';">Guardar</button>
-                <div class="intereses">
-                    <p class="RalewayP margin0 fontsize25">Intereses de ropa</p><br>
-                    <input type="checkbox" class="plus">Faldas<br><br>
-                    <input type="checkbox" class="plus">Vestidos<br><br>
-                    <input type="checkbox" class="plus">Pantalones<br><br>
-                    <input type="checkbox" class="plus">Leggings<br><br>
-                    <input type="checkbox" class="plus">Playeras<br><br>
-                    <input type="checkbox" class="plus">Blusas<br><br>
-                    <input type="checkbox" class="plus">Sacos<br><br>
-                    <input type="checkbox" class="plus">Chamarras<br><br>
-                    <input type="checkbox" class="plus">Sueteres<br><br>
-                    <input type="checkbox" class="plus">Sudaderas<br><br>
-                </div>
-                <div class="intereses">
-                    <p class="RalewayP margin0 fontsize25">Intereses de accesorios</p><br>
-                    <input type="checkbox" class="plus">Collares<br><br>
-                    <input type="checkbox" class="plus">Aretes<br><br>
-                    <input type="checkbox" class="plus">Pulseras<br><br>
-                    <input type="checkbox" class="plus">Anillos<br><br>
-                </div>
-                <div class="intereses">
-                    <p class="RalewayP margin0 fontsize25">Intereses de tutoriales</p><br>
-                    <input type="checkbox" class="plus">Maquillaje<br><br>
-                    <input type="checkbox" class="plus">Cocina<br><br>
-                    <input type="checkbox" class="plus">Repostería<br><br>
-                    <input type="checkbox" class="plus">Diseño de uñas<br><br>
-                    <input type="checkbox" class="plus">DIY<br><br>
+                <div class="TodosI">
+                    <div class="intereses" id="1">
+                        <p class="RalewayP margin0 fontsize25">Intereses de chat</p><br>
+                        <input type="checkbox" class="plus">Moda<br><br>
+                        <input type="checkbox" class="plus">Belleza<br><br>
+                        <input type="checkbox" class="plus">Consejos<br><br>
+                        <input type="checkbox" class="plus">Confesiones<br><br>
+                        <input type="checkbox" class="plus">Diversión<br><br>
+                        <input type="checkbox" class="plus">Amistades<br><br>
+                    </div>
+                    <div class="intereses" id="2">
+                        <p class="RalewayP margin0 fontsize25">Intereses de outfits</p><br>
+                        <input type="checkbox" class="plus">Lo más nuevo<br><br>
+                        <input type="checkbox" class="plus">Hipster<br><br>
+                        <input type="checkbox" class="plus">Fresa<br><br>
+                        <input type="checkbox" class="plus">Elegante<br><br>
+                        <input type="checkbox" class="plus">Rockera<br><br>
+                        <input type="checkbox" class="plus">Dark<br><br>
+                    </div>
+                    <div class="intereses" id="3">
+                        <p class="RalewayP margin0 fontsize25">Intereses de publicaciones</p><br>
+                        <input type="checkbox" class="plus">Feminismo<br><br>
+                        <input type="checkbox" class="plus">Risa<br><br>
+                        <input type="checkbox" class="plus">Moda<br><br>
+                        <input type="checkbox" class="plus">Motivadoras<br><br>
+                        <input type="checkbox" class="plus">Frases<br><br>
+                        <input type="checkbox" class="plus">Política y cosas más serias<br><br>
+                        <input type="checkbox" class="plus">Amor<br><br>
+                    </div>
+                    <div class="intereses" id="4">
+                        <p class="RalewayP margin0 fontsize25">Intereses de accesorios</p><br>
+                        <input type="checkbox" class="plus">Collares<br><br>
+                        <input type="checkbox" class="plus">Pulseras<br><br>
+                        <input type="checkbox" class="plus">Anillos<br><br>
+                        <input type="checkbox" class="plus">Aretes<br><br>
+                        <input type="checkbox" class="plus">Bufandas<br><br>
+                        <input type="checkbox" class="plus">Gorras<br><br>
+                        <input type="checkbox" class="plus">Gorritos<br><br>
+                    </div>
+                    <div class="intereses" id="5">
+                        <p class="RalewayP margin0 fontsize25">Colores de tus prendas y accesorios</p><br>
+                        <input type="checkbox" class="plus">Coloridos<br><br>
+                        <input type="checkbox" class="plus">Oscuros<br><br>
+                        <input type="checkbox" class="plus">Estampados<br><br>
+                        <input type="checkbox" class="plus">Rosas<br><br>
+                        <input type="checkbox" class="plus">Arcoíris<br><br>
+                    </div>
+                    <div class="intereses" id="6">
+                        <p class="RalewayP margin0 fontsize25">Intereses de zapatos</p><br>
+                        <input type="checkbox" class="plus">Botas<br><br>
+                        <input type="checkbox" class="plus">Tenis<br><br>
+                        <input type="checkbox" class="plus">Zapatos de piso<br><br>
+                        <input type="checkbox" class="plus">Tacones<br><br>
+                        <input type="checkbox" class="plus">Sandalias<br><br>
+                    </div>
+                    <div class="intereses" id="7">
+                        <p class="RalewayP margin0 fontsize25">Intereses de tutoriales</p><br>
+                        <input type="checkbox" class="plus">Repostería<br><br>
+                        <input type="checkbox" class="plus">DIY'S<br><br>
+                        <input type="checkbox" class="plus">Cocina<br><br>
+                        <input type="checkbox" class="plus">Moda<br><br>
+                        <input type="checkbox" class="plus">Maquillaje<br><br>
+                        <input type="checkbox" class="plus">Entretenimiento<br><br>
+                        <input type="checkbox" class="plus">Belleza Personal<br><br>
+                    </div>
+                    <div class="intereses" id="8">
+                        <p class="RalewayP margin0 fontsize25">Intereses de ropa</p><br>
+                        <input type="checkbox" class="plus">Playeras<br><br>
+                        <input type="checkbox" class="plus">Blusas<br><br>
+                        <input type="checkbox" class="plus">Pantalones<br><br>
+                        <input type="checkbox" class="plus">Shorts<br><br>
+                        <input type="checkbox" class="plus">Medias<br><br>
+                        <input type="checkbox" class="plus">Sueteres<br><br>
+                        <input type="checkbox" class="plus">Sudaderas<br><br>
+                        <input type="checkbox" class="plus">Chamarras<br><br>
+                    </div>
                 </div>
             </div>
         </div>

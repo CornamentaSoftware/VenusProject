@@ -10,6 +10,10 @@
     color:#eeeeee;
     font-weight: 800;
 }
+.interes{
+        padding: 10px;
+        height: 800px;
+}
 input[type="checkbox"]{
     appearance: none;
     -moz-appearance: none;
