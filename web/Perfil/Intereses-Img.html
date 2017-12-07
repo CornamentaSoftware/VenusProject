@@ -1,0 +1,52 @@
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Venus</title>
+                <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
+                <link href="../css/Perfil/Intereses.css" rel="stylesheet" type="text/css"/>
+                <link href="../font-Awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" type="text/css" href="../css/Perfil/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Perfil/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Perfil/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Perfil/cs-skin-circular.css" />
+	</head>
+	<body class="color-8">
+		<div class="container">
+			<section>
+				<select class="cs-select cs-skin-circular">
+					<option value="" disabled selected>Select an activity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			</section>
+		</div><!-- /container -->
+                <script src="../JS/classie.js" type="text/javascript"></script>
+                <script src="../JS/selectFx.js" type="text/javascript"></script>
+		<script>
+                        (function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							var img = document.createElement('img');
+							img.src = '../Img/Perfil/'+val+'.png';
+							img.onload = function() {
+								document.querySelector('span.cs-placeholder').style.backgroundImage = 'url(../Img/Perfil/'+val+'.png)';
+                                                                document.querySelector('span.cs-placeholder').style.backgroundSize = '100px';
+							};
+						}
+					});
+				} );
+			})();
+		</script>
+	</body>
+</html>

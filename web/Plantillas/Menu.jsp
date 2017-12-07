@@ -91,7 +91,7 @@
         <%@page import="java.io.*, java.text.SimpleDateFormat" %>
         <%
             String user = (String)session.getAttribute("usuario");
-            String imagenperfil = (String)session.getAttribute("ImagenPerfil");
+            String ip = (String)session.getAttribute("IP");
             
             if(user ==null)
             {
@@ -106,34 +106,22 @@
                        
             String ultima = (String) formatter.format(session.getAttribute("last"));
             
-            long longDuracion= session.getCreationTime(); 
+            long longDuracion=session.getLastAccessedTime(); 
+            session.getCreationTime(); 
             Date duracion=new Date(longDuracion);
-            Date actual = new Date();
-            
             String crop = ("Tiempo en la sesion: " + duracion.getMinutes() + "min." + duracion.getSeconds()+"seg");
-            int diferenciaHoras=actual.getHours() - duracion.getHours();
-            int diferenciaMinutos=actual.getMinutes() - duracion.getMinutes();
-            //Muestra el resultado en el textfield
-            String hora="Tiempo en la sesion: "+diferenciaHoras+" horas, "+diferenciaMinutos+" minutos.";
-            
         %>
         <div class="MenuA">
             <div class="Logo">
                 <img src="../Img/logo3.png" alt=""/>
             </div>
-                <div class="Venus"style="float: left">
-                Venus
-                </div>
-                <div class="bien">
-                    <center><h1>¡Bienvenido: <%=user%>!<img style="height: 50px; width: 50px" src="../<%=imagenperfil%>"></h1></center>
-                </div>
             <div class="Derecha">
                 <div class="Reloj" name="cron" id="cronometro">
-                    <h2 class="letraReloj"><br><%=hora%><br>Ultima conexion: <%=conexion%></h2>
+                    <h2 class="letraReloj"><%=ip%><br><%=crop%><br>Ultima conexion: <%=conexion%></h2>
                 </div>
                 <ul class="ca-menu"> 
                     <li class="chico">
-                        <a href="salir.jsp">
+                        <a href="Inicio.html">
                             <span class="fa fa-sign-out" id="H"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">Salir</h2>
@@ -149,6 +137,9 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="Venus">
+                Venus
             </div>
         </div>
         <div class="container">
@@ -197,7 +188,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../Perfil/Perfil-Seguridad.html">
+                        <a href="Perfil.html">
                             <i class="fa fa-user"></i>
                             <strong>Perfil</strong>
                             <small>Tu privacidad</small>
