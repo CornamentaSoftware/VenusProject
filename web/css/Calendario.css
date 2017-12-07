@@ -259,7 +259,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
     cursor: pointer;
 }
 .tit{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin: 0px;
     margin-bottom: 10px;
@@ -297,13 +297,13 @@ div.frame{
 .textco{
     font-size: 14px;
     margin: 0px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: justify;
 }
 .textc2{
     font-size: 14px;
     margin: 0px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
 }
 .barraacand{
