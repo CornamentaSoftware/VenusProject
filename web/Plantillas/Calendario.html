@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Venus</title>
@@ -7,12 +6,69 @@
         <link href="../font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <link href="../css/menu.css" rel="stylesheet" type="text/css"/>
         <link href="../css/menuA.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/Chats/nuevoChat.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" type="image/x-icon" href="../Img/logo3.png">
         <link href="../css/General.css" rel="stylesheet" type="text/css"/>
         <link href="../css/botones.css" rel="stylesheet" type="text/css"/>
         <link href="../css/TimeLine.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css">
         <link href="../css/Calendario.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../font-Awesome/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/jquery-ui.min.css">
+        <link rel="stylesheet" href="../css/images/">
+        <link rel="stylesheet" href="../css/Perfil/General.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/Perfil/General.css" type="text/css">
+        <link rel="stylesheet" href="../fontello-10121c09/css/fontello.css" type="text/css"/>
+
+
+
+
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/datepicker-es.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#textofecha').datepicker({
+                    changeYear: true,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    showButtonPanel: true
+                });
+                $('#date-button').on('click', function () {
+                    $('#textofecha').datepicker('show');
+                });
+            });
+            function adda(delta) {
+                valor = eval(formulario1.casilla1.value);
+                if (valor < 10) {
+                    formulario1.casilla1.value = eval(valor + delta);
+                }
+            }
+            function addb(delta) {
+                valor = eval(formulario1.casilla1.value);
+                if (valor > 1) {
+                    formulario1.casilla1.value = eval(valor + delta);
+                }
+            }
+            function add2a(delta) {
+                valor = eval(formulario2.casilla2.value);
+                if (valor < 40) {
+                    formulario2.casilla2.value = eval(valor + delta);
+                }
+            }
+            function add2b(delta) {
+                valor = eval(formulario2.casilla2.value);
+                if (valor > 1) {
+                    formulario2.casilla2.value = eval(valor + delta);
+                }
+            }
+            function calen() {
+                document.getElementById("windowcal").style.display = "block";
+                document.all("windowcal").src = "calendariodos.html";
+                document.getElementById("windowciclo").style.display = "block";
+                document.getElementById("divbae").style.display = "block";
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -48,7 +104,7 @@
             <nav>
                 <ul class="mcd-menu">
                     <li>
-                        <a href="" class="active">
+                        <a href="">
                             <i class="fa fa-home"></i>
                             <strong>Home</strong>
                             <small>sweet home</small>
@@ -62,7 +118,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="" class="active">
                             <i class="fa fa-calendar"></i>
                             <strong>Calendario</strong>
                             <small>Agenda tu día a día</small>
@@ -91,7 +147,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="Perfil.html">
+                        <a href="Perfil.jsp">
                             <i class="fa fa-user"></i>
                             <strong>Perfil</strong>
                             <small>Tu privacidad</small>
@@ -107,45 +163,146 @@
             </nav>
         </div>
         <div class="Calendario">
-            <div>
-                <p class="DancingScript">Calendario Menstrual</p>
-                <div>
-                    <table>
-                        <tr>
-                            <td><p class="subtititle">
-                                    Fecha del inicio de tu último periodo 
-                                </p>
+            <p class="DancingScript">Calendario Menstrual</p>
+            <div id="divBotones">
+                <p class="tit">¡CONOCE TU CICLO!</p>
+                <p class="textco">Introduce los datos para que puedas crear tu calendario menstrual y tu ciclo:</p>
+                <br>
+                <table>
+                    <tr>
+                        <th id="th1">
+                            <p class="Montserrat">
+                                ¿Cuándo inició tu último periodo? 
 
-                                <button type="button" class="btncalen btnR btnpos fa fa-calendar-check-o"></button>  
-                            </td>
-                            <td>
-                                <p class="subtititle">
-                                    Duración de tu último periodo
-                                </p>
-                                <br>
-                                <span class="btnplusmin btnR btnpos fa fa-minus"></span> 
-                                <span class="spannums btnR btnpos">1</span>
-                                <span class="btnplusmin btnR btnpos fa fa-plus"></span>
-                            </td>
-                            <td>
-                                <p class="subtititle">
-                                    Duración de tu ciclo menstrual
-                                </p>
-                                <br>
-                                <span class="btnplusmin btnR btnpos fa fa-minus"></span> 
-                                <span class="spannums btnR btnpos">1</span>
-                                <span class="btnplusmin btnR btnpos fa fa-plus"></span>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btnR btnpos">Generar</button>  
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                            </p>
+                        </th>
+                        <th id="th2">
+                            <p class="Montserrat">
+                                ¿Cuántos días duró?
+
+                            </p>
+                        </th>
+                        <th id="th3">
+                            <p class="Montserrat">
+                                ¿Cuántos días dura tu ciclo?
+                            </p>
+                        </th>
+                        <th>
+                            <p class="Montserrat">
+                                Calcular
+                            </p>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="textofecha"/>
+                            <button id="date-button" class="btncalen btnRCalen btnpos fa fa-calendar-check-o"></button>
+                        </td>
+                        <td>
+                            <form name="formulario1">
+                                <span class="btnplusmin1 btnR2td btnpos fa fa-minus" onClick="addb(-1);"> </span>
+                                <input type="text" class="spannums btnR2td btnpos" name="casilla1" value="1" readonly />
+                                <span class="btnplusmin1 btnR2td btnpos fa fa-plus" onClick="adda(1);"></span>
+                            </form>
+                        </td>
+                        <td>
+                            <form name="formulario2">
+                                <span class="btnplusmin2 btnR3td btnpos fa fa-minus" onclick="add2b(-1);"></span> 
+                                <input type="text" class="spannums2 btnR3td btnpos" name="casilla2" value="1" readonly> 
+                                <span class="btnplusmin2 btnR3td btnpos fa fa-plus" onclick="add2a(1);"></span>
+                            </form>
+
+                        </td>
+                        <td>
+                            <span class="btn2 btnR2 btnpos fa fa-calculator" onclick="calen();"></span>
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <div class="frame">
-                <iframe width="300" height="300" id="window"></iframe>
+        </div>
+        <div class="barraT">
+            <div id="titlecons">
+                <p class="tit3">Algunos consejos...</p>
             </div>
+        </div>
+        <div class="barraC">
+            <div class="consejos">
+                <p class="tit">Mantente activa</p>
+                <p class="textco">Cuando haces deporte tu cuerpo libera endorfinas, por lo que ayudan a aliviar el dolor de la menstruación de forma natural.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Dulce para el malhumor</p>
+                <p class="textco">Si sueles ponerte molesta o de malhumor en esos días, come algo dulce, y te pondrás mejor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Reduce tu estres</p>
+                <p class="textco">El estrés psicológico puede aumentar la gravedad de tus dolores menstruales.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Descansa</p>
+                <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Descansa</p>
+                <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Descansa</p>
+                <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Descansa</p>
+                <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
+            </div>
+            <div class="consejos">
+                <p class="tit">Descansa</p>
+                <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
+            </div>
+        </div>
+        <div class="barraacand" id="divbae" style="display: none">
+            <p class="textc2">Selecciona un d&iacute;a de tu calendario y agrega las caracter&iacute;sticas que desees...</p>
+            <br>
+            <p class="askbarra Montserrat" onclick="">&iquest;C&oacute;mo te sientes&#63;</p>
+            <span class="litbtn color1 color1R btnpos icon-emo-happy" onClick=""> </span>
+            <span class="litbtn color2 color2R btnpos icon-emo-unhappy" onClick=""></span>
+            <span class="litbtn color3 color3R btnpos icon-emo-cry" onClick=""></span>
+            <span class="litbtn color4 color4R btnpos icon-emo-angry" onClick=""></span>
+            <br>
+            <p class="askbarra Montserrat" onclick="">&iquest;Hubo sangrado&#63;</p>
+            <span class="litbtn color5 color5R btnpos icon-water" onClick=""> </span>
+            <span class="litbtn color6 color6R btnpos icon-droplet" onClick=""></span>
+            <span class="litbtn color7 color7R btnpos icon-cancel" onClick=""></span>
+            <br>
+            <p class="askbarra Montserrat" onclick="">&iquest;Tuviste cólicos&#63;</p>
+            <span class="litbtn2 color8 color8R btnpos fa fa-circle" onClick=""> </span>
+            <span class="litbtn2 color9 color9R btnpos fa fa-adjust" onClick=""></span>
+            <span class="litbtn2 color10 color10R btnpos fa fa-circle-o" onClick=""></span>
+        </div>
+        <div class="frame">
+            <iframe class="liframe" width="290" height="400" name="cal" id="windowcal" hidden="hidden"></iframe>
+            <!-- <iframe class="border" width="422" height="428" src="../Img/cm.jpg" name="cal" id="windowciclo" hidden="hidden"></iframe>
+            -->
+            <br>
+            <br>
+            <p class="tit2">¿POR QUÉ DEBEMOS LLEVAR UN CONTROL DE NUESTRO CICLO MENSTRUAL?</p>
+            <br>
+            <p class="textco">
+                El uso de un calendario menstrual es muy importante, ya que
+                es ideal para registrar, conocer, planear y prepararse 
+                ante eventos como la menstruación. <br><br>
+                Te permite tener una idea general y exacta de tus ciclos. 
+                Así, cuando toque un nuevo ciclo no te tomará por sorpresa 
+                o desprevenida, te permitirá identificar irregularidades o 
+                alteraciones, te ayudará a reconocer tus días fértiles y a
+                prepararte para el momento en que decidas usar un método 
+                anticonceptivo. 
+                Cuando acudas con tu médico o ginecólogo no olvides consultarlo, 
+                ya que así tendrá un instrumento más para el mejor seguimiento 
+                de tu estado de salud y podrá recomendarte con mayor precisión 
+                un tratamiento específico, en caso de que lo necesites.
+            </p>
+            <br>
         </div>
     </body>
 </html>
