@@ -1,0 +1,19 @@
+.estrella{
+    color: #F6DA1E;
+    font-size: 1.5em;
+    position: absolute;
+}
+.size{
+    font-size: 2em;
+}
+.size2{
+    font-size: 1.5em;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.intercambio{ 
+    color: #F0DCD8;
+    font-size: 1.5em;
+    position: absolute;
+    margin-left: 55%;
+}
