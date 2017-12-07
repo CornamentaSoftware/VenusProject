@@ -67,6 +67,7 @@
                 document.getElementById("windowcal").style.display = "block";
                 document.all("windowcal").src = "calendariodos.html";
                 document.getElementById("windowciclo").style.display = "block";
+                document.getElementById("divbae").style.display = "block";
             }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -260,7 +261,7 @@
                 <p class="textco">Dormir bien es fundamental, reduce los malestares y mejora tu humor.</p>
             </div>
         </div>
-        <div class="barraacand">
+        <div class="barraacand" id="divbae" style="display: none">
             <p class="textc2">Selecciona un d&iacute;a de tu calendario y agrega las caracter&iacute;sticas que desees...</p>
             <br>
             <p class="askbarra Montserrat" onclick="">&iquest;C&oacute;mo te sientes&#63;</p>
@@ -278,7 +279,6 @@
             <span class="litbtn2 color8 color8R btnpos fa fa-circle" onClick=""> </span>
             <span class="litbtn2 color9 color9R btnpos fa fa-adjust" onClick=""></span>
             <span class="litbtn2 color10 color10R btnpos fa fa-circle-o" onClick=""></span>
-
         </div>
         <div class="frame">
             <iframe class="liframe" width="290" height="400" name="cal" id="windowcal" hidden="hidden"></iframe>
