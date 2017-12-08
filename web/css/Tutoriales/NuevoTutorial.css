@@ -1,0 +1,132 @@
+button{
+    font-family: 'Raleway', sans-serif;
+    border: 1.5px solid rgba(255, 255, 255, 0.52);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+    background-color: rgba(158, 47, 86, 0);
+    color: rgba(255, 255, 255, 0.52);
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.ins{
+    width: 50%;
+    margin: auto;
+}
+.texto{
+    margin:0px;
+}
+.dN{
+    width: auto;
+    height: auto;
+    margin: 0px;
+    float: right;
+    margin-top: -20px;
+    margin-right: 58%;
+    font-size: 1.5em;
+}
+.mas{
+    margin:0;
+    padding:0; 
+    color:#002D3C;
+    float: left;
+    border:none;
+    height:auto;
+    width:auto;
+    background: none;
+}
+.menos{
+    margin:0;
+    float: left;
+    margin-left:10px;
+    color:#002D3C;
+    border:none;
+    height:auto;
+    width:auto;
+    padding: 0;
+    background: none;
+}
+.mas:hover{
+    color: rgba(255, 255, 255, 0.52);
+}
+.menos:hover{
+    color: rgba(255, 255, 255, 0.52);
+}
+button:hover {
+    background-color: #FFA08E;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.R{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    border-top: 0;
+    height:auto;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(158, 47, 86, 0);
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.Raleway{
+    text-align: center;
+}
+.inputfile {
+    height: auto;
+    opacity: 0;
+    padding: 1%;
+    margin-left: -50%;
+    margin-top: -2%;
+    float: left;
+    width: 60%;
+    position: absolute;
+}
+.subir{
+    margin-right: 10%;
+    z-index: 1;
+    float: left;
+    margin-left: 10%;
+}
+.tutorial{
+    text-align:center;
+    color: #002D3C;
+    font-weight: bolder;
+    margin: 20px 0px;
+    font-size: 3em;
+}
+.inputM{
+    width: 100%;
+    float: left;
+    margin: 0px;
+}
+.iborrainputfile {
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+    width: 100%;
+    margin-bottom: 25px;
+    font-size:18px;
+    font-family: 'Raleway', sans-serif;
+    padding: 2px;
+    float: left;
+    z-index: 0;
+    text-align: center;
+}
+.iborrainputfile:hover{
+    background: #FFA08E;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.8); 
+}
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.8); 
+}
+textarea{
+    height: 60px;
+}
+.nada{
+    margin: 0px;
+    position: absolute;
+    width: 60%;
+}

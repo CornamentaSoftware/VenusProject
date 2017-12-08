@@ -1,0 +1,213 @@
+.inputBuscar{
+    width: 75.5%;
+    color: black;
+    margin-left: 0px;
+    margin-top: -15px;
+    position: absolute;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 16% 15px 10%;
+    border: 1.5px solid #ccc;
+    border-radius: 23px;
+    background: #f4f2f2;
+}
+.I{
+    width: 30%;
+    float: left;
+}
+.Video{
+    width: 100%;
+    float: left;
+}
+video{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px #FE7D78;
+    margin-bottom: 20px;
+}
+.FEAE93{
+    background:#FEAE93;
+}
+.inputBuscar:focus{
+    outline:0px;
+}
+.Materiales{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: #882750;
+    letter-spacing: 2px;
+    margin: 0px;
+    font-weight: bolder;
+}
+.dMateriales{
+    width:40%;
+    margin: 0px 5%;
+    float:left;
+}
+.Raleway{
+    font-size: 1.1em;
+}
+.icono{
+    font-size: 25px;
+    position: absolute;
+    float:left;
+    margin-right:10px;
+    margin-left: 20px;
+    margin-top: -4px;
+    z-index: 1;
+}
+.iconoBuscar{
+    font-size: 20px;
+    color:#BA6359;
+}
+.buscar{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.NombreO{
+    margin:0;
+    color: #EF4667;
+    margin-top:5%;
+    margin-left:5%;
+    font-weight: bolder;
+    font-size: 2em;
+}
+.piezas{
+    width: 50%;
+    float: left;
+    margin-left: 4%;
+}
+.descripcion{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+}
+.descripcionV{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+.Lista{
+    line-height: 1.6em;
+}
+.piezas img{
+    width: 28%;
+    box-shadow: 0px 0px 5px #999;
+    margin: 2%;
+    border-radius: 20%;
+}
+.final{
+    width: 30%;
+    float: left;
+}
+.final img{
+    box-shadow: 0px 0px 10px #999;
+    max-width: 90%;
+    border-radius: 40%;
+    margin: 10% 5%;
+    float: left;
+}
+.btnFont{
+    margin-top: 4%;
+    background: #F78582;
+}
+.E89B8C{
+    background:#E89B8C
+}
+.FBD0BF{
+    background: #FBD0BF;
+}
+.Tutoriales{
+    width: 100%;
+    box-shadow: 0px 0px 5px #999;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    padding: 0px 10px;
+}
+.publicacion{
+    position: relative;
+    border: none;
+    float: left;
+    height: auto;
+    padding: 10px;
+}
+.publicacion .ImgP{
+    border-radius: 50%;
+    max-width: 15%;
+    float: left;
+    margin-right: 1%;
+}
+.nombre{
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0px;
+    float: left;
+}
+.user{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.fecha{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+}
+.fechaHora{
+    margin: 0;
+    width: 180px;
+    float: right;
+}
+.hora{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.cuerpoNuevo{
+    height: 91%;
+    width: 55%;
+    float: left;
+    position: absolute;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+.usuario{
+    font-size: 14px;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+.user{
+    border: none;
+    background: none;
+}
+.user:hover{
+    background: #E7E4E4;
+}
+.user Img{
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 15px;
+    float: left;
+}
+.DivRosa{
+    width: 60%;
+    background: #FE9E8E;
+    box-shadow: 3px 3px 20px #FE9E8E;
+    padding: 20px 15px 20px 15px;
+    border-radius: 5px;
+    margin: auto;
+    height: auto;
+    color: #493b39;
+    font-size: 18px;
+    margin-top: 30px;
+}
