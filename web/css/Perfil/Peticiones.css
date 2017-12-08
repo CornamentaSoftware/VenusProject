@@ -1,0 +1,209 @@
+.PublicacionesGeneral{
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+    height: 90%;
+}
+.center{
+    text-align: center;
+}
+.tit{
+    margin: 0px 10px;
+    color:#FE2359;
+    font-weight: bolder;
+    font-size: 3em;
+}
+.cuerpoNuevo {
+    height: 91%;
+    width: 55%;
+    float: left;
+    position: absolute;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+.btnFont {
+    margin-top: -7%;
+}
+.todasE{
+    width: 100%;
+    float:left;
+    margin: 10px 0px;
+}
+.etiquetas{
+    color:#345D7E;
+    float: left;
+    margin: 0px 10px;
+    font-weight: bolder;
+}
+.Publicaciones{
+    width: 91%;
+    height: 75%;
+    position: relative;
+    margin-top: 1%;
+}
+.publicacion{
+    margin-top: 15px;
+    position: relative;
+    border: none;
+    float: left;
+    border-top: 1.5px solid #bfbdbd;
+    height: auto;
+    padding: 10px;
+}
+.publicacion Img{
+    border-radius: 50%;
+    max-width: 15%;
+    float: left;
+    margin-right: 1%;
+}
+.nombre{
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0px;
+    float: left;
+}
+.user{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.fecha{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+}
+.fechaHora{
+    width: 180px;
+    margin: 0px;
+    float: right;
+}
+.hora{
+    font-size: 16px;
+    margin: 0px;
+    float: left;
+    color: gray;
+    margin-left: 2%;
+}
+.contenido{
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width:84%;
+    float:left;
+}
+.imagen{
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.nada{
+    margin: 0px;
+    padding: 0px;
+    float:left;
+    margin-left:5px;
+    font-size:16px;
+    font-family: 'Raleway', sans-serif;
+}
+button{
+    font-family: 'Raleway', sans-serif;
+    border: 1.5px solid rgba(255, 255, 255, 0.52);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+    background-color: rgba(158, 47, 86, 0);
+    color: rgba(255, 255, 255, 0.52);
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.mt:hover {
+    background-color: rgba(240,127,126,0.85);;
+    transition: background-color .1s 0s ease-in-out,color .1s 0s ease-in-out;
+}
+.texto{
+    margin:0px;
+}
+.dN{
+    width: auto;
+    height: auto;
+    margin: 0px;
+    float: right;
+    margin-top: -20px;
+    margin-right: 58%;
+    font-size: 1.5em;
+}
+.inputM{
+    width: 100%;
+    float: left;
+    margin: 0px;
+}
+.mas{
+    margin:0;
+    padding:0; 
+    color:#002D3C;
+    float: left;
+    border:none;
+    height:auto;
+    width:auto;
+    background: none;
+}
+.menos{
+    margin:0;
+    float: left;
+    margin-left:10px;
+    color:#002D3C;
+    border:none;
+    height:auto;
+    width:auto;
+    padding: 0;
+    background: none;
+}
+.mas:hover{
+    color: rgba(255, 255, 255, 0.52);
+}
+.menos:hover{
+    color: rgba(255, 255, 255, 0.52);
+}
+.topM{
+    margin-top: 40px;
+}
+.R {
+    width: 100%;
+    color: black;
+    margin: 10px 0px;
+    font-family: 'Raleway', sans-serif;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(158, 47, 86, 0);
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.52);
+}
+.R::placeholder{
+    color: black; 
+}
+textarea{
+    height: 60px;
+}
+.DivRosa{
+    width: 60%;
+    background: #F07F7E;
+    box-shadow: 0px 0px 20px #F07F7E;
+    padding: 20px 15px 0px 15px;
+    border-radius: 5px;
+    margin: auto;
+    height: auto;
+    font-size:1.2em;
+    font-weight: bolder;
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+.mt{
+    margin-top:15px;
+    margin-bottom:15px;
+}
